@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'YourFontFamily';
+  src: url('../public/fonts/SofiaProBlack-Italic.eot') format('eot');
+
+       
+  font-weight: normal;
+  font-style: normal;
+}
