@@ -7,13 +7,6 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      Quinary: "#707070",
-      Quaternary: "#ADADAD",
-      Tertiary: "#F8F7F4",
-      Secondary: "#E0F869",
-      Primary: "#072434",
-    },
     extend: {
       fontFamily: {
         SofiaProSemiBoldItalic: ["SofiaProSemiBoldItalic", "sans-serif"],
@@ -32,6 +25,13 @@ const config: Config = {
         SofiaProExtraLight: ["SofiaProExtraLight", "sans-serif"],
         SofiaProLightItalic: ["SofiaProLightItalic", "sans-serif"],
         SofiaProLight: ["SofiaProLight", "sans-serif"],
+      },
+      colors: {
+        Quinary: "#707070",
+        Quaternary: "#ADADAD",
+        Tertiary: "#F8F7F4",
+        Secondary: "#E0F869",
+        Primary: "#072434",
       },
     },
     plugins: [],
