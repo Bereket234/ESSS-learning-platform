@@ -15,6 +15,7 @@ export default function Navbar() {
 
   return (
     <nav className="relative flex container h-18 w-full items-center mx-auto my-3 align-baseline px-5">
+      {/* Logo */}
       <div className="flex justify-center align-baseline">
         <div className="flex item-center">
           <Image
@@ -35,6 +36,8 @@ export default function Navbar() {
           />
         </div>
       </div>
+
+      {/* Desktop Navigation Links  */}
       <div className="flex container justify-between">
         <div className="hidden md:flex space-x-6 pl-14 pr-5">
           <Link
@@ -68,6 +71,8 @@ export default function Navbar() {
           </button>
           <TbWorld className="hidden text-Primary md:block text-3xl" />
         </div>
+
+        {/* Mobile Navigation Links and Hamburger Menu  */}
         <div className="flex justify-between md:hidden">
           <div className="flex space-x-4 pr-4">
             <Link
@@ -81,14 +86,17 @@ export default function Navbar() {
             </button>
             <TbWorld className="hidden text-Primary md:block text-3xl" />
           </div>
+
+          {/* Hamburger Menu Button for Mobile */}
           <button onClick={toggelHamburger} className="flex md:hidden">
-            {!openHamburger && (
+            {openHamburger ? (
+              <IoMdClose className="md:hidden text-3xl text-Primary" />
+            ) : (
               <RxHamburgerMenu className="md:hidden text-3xl text-Primary" />
             )}
-            {openHamburger && (
-              <IoMdClose className="md:hidden text-3xl text-Primary" />
-            )}
           </button>
+
+          {/* Mobile Navigation Menu */}
           {openHamburger && (
             <div className="md:hidden">
               <div
