@@ -39,27 +39,27 @@ export default function Navbar() {
 
       {/* Desktop Navigation Links  */}
       <div className="flex container justify-between">
-        <div className="hidden md:flex space-x-6 pl-14 pr-5">
+        <div className="hidden md:flex space-x-6 pl-6 lg:pl-14 pr-5">
           <Link
             href={"/home"}
-            className="text font-bold text-Primary hover:text-Primary/70 lg:text-xl"
+            className="text font-bold text-Primary hover:text-Primary/70 py-1 lg:text-xl"
           >
             Home
           </Link>
           <Link
             href={"/courses"}
-            className="text font-bold text-Primary hover:text-Primary/70 lg:text-xl"
+            className="text font-bold text-Primary hover:text-Primary/70 py-1 lg:text-xl"
           >
             Courses
           </Link>
           <Link
             href={"/about"}
-            className="text font-bold text-Primary hover:text-Primary/70 lg:text-xl"
+            className="text font-bold text-Primary hover:text-Primary/70 py-1 lg:text-xl"
           >
             About
           </Link>
         </div>
-        <div className="flex space-x-6">
+        <div className="flex space-x-6 items-center">
           <Link
             href={"/login"}
             className="hidden text font-bold text-Primary md:block hover:bg-Secondary rounded-full px-2 py-1 lg:text-xl"
