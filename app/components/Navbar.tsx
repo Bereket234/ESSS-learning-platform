@@ -10,7 +10,7 @@ export default function Navbar() {
   const [openHamburger, setOpenHamburger] = useState(false);
 
   const toggelHamburger = () => {
-    setOpenHamburger(!openHamburger);
+    setOpenHamburger((value) => !value);
   };
 
   return (
@@ -23,7 +23,7 @@ export default function Navbar() {
             alt="logo"
             width={80}
             height={50}
-            objectFit="contain"
+            className="object-contain"
           />
         </div>
         <div className="flex item-center pl-5">
@@ -31,8 +31,8 @@ export default function Navbar() {
             src="/assets/images/learning.png"
             height={80}
             width={200}
-            objectFit="contain"
             alt="logo"
+            className="object-contain"
           />
         </div>
       </div>
@@ -66,9 +66,12 @@ export default function Navbar() {
           >
             Login
           </Link>
-          <button className="hidden text font-bold text-Secondary bg-Primary rounded-full px-2 py-1 baseline md:block hover:bg-Primary/70 text-sm lg:text-x">
+          <Link
+            href="/register"
+            className="hidden text font-bold text-Secondary bg-Primary rounded-full px-2 py-1 baseline md:block hover:bg-Secondary hover:text-Primary text-sm lg:text-x"
+          >
             Sign Up
-          </button>
+          </Link>
           <TbWorld className="hidden text-Primary md:block text-3xl" />
         </div>
 
@@ -81,9 +84,12 @@ export default function Navbar() {
             >
               Login
             </Link>
-            <button className=" text font-bold text-Secondary bg-Primary rounded-full px-2 py-1 baseline hover:bg-Primary/70 text-sm">
+            <Link
+              href="/register"
+              className=" text font-bold text-Secondary bg-Primary rounded-full px-2 py-1 baseline hover:bg-Secondary hover:text-Primary text-sm"
+            >
               Sign Up
-            </button>
+            </Link>
             <TbWorld className="hidden text-Primary md:block text-3xl" />
           </div>
 
@@ -98,7 +104,7 @@ export default function Navbar() {
 
           {/* Mobile Navigation Menu */}
           {openHamburger && (
-            <div className="md:hidden">
+            <div className="md:hidden z-10">
               <div
                 id="menu"
                 className="absolute flex flex-col items-center self-end py-6 mt-12 space-y-6 font-bold bg-Tertiary sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
