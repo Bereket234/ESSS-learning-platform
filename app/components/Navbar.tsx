@@ -62,13 +62,13 @@ export default function Navbar() {
         <div className="flex space-x-6">
           <Link
             href={"/login"}
-            className="hidden text font-bold text-Primary md:block hover:text-Primary/70 lg:text-xl"
+            className="hidden text font-bold text-Primary md:block hover:bg-Secondary rounded-full px-2 py-1 lg:text-xl"
           >
             Login
           </Link>
           <Link
             href="/register"
-            className="hidden text font-bold text-Secondary bg-Primary rounded-full px-2 py-1 baseline md:block hover:bg-Secondary hover:text-Primary text-sm lg:text-x"
+            className="hidden text font-bold text-Secondary bg-Primary rounded-full px-2 py-1 baseline md:block hover:bg-Secondary hover:text-Primary text-sm lg:text-xl"
           >
             Sign Up
           </Link>
@@ -80,7 +80,7 @@ export default function Navbar() {
           <div className="flex space-x-4 pr-4">
             <Link
               href={"/login"}
-              className=" text font-bold text-Primary hover:text-Primary/70 lg:text-xl"
+              className=" text font-bold text-Primary hover:bg-Secondary px-2 py-1 rounded-full lg:text-xl"
             >
               Login
             </Link>
