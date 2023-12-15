@@ -2,8 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { TbWorld } from "react-icons/tb";
-import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoMdClose } from "react-icons/io";
 
 export default function Navbar() {
   const [openHamburger, setOpenHamburger] = useState(false);
@@ -62,14 +63,31 @@ export default function Navbar() {
           >
             Login
           </Link>
-          <button className="hidden text font-bold text-Secondary bg-Primary rounded-full px-2 py-1 baseline md:block hover:bg-Primary/70">
+          <button className="hidden text font-bold text-Secondary bg-Primary rounded-full px-2 py-1 baseline md:block hover:bg-Primary/70 text-sm lg:text-x">
             Sign Up
           </button>
           <TbWorld className="hidden text-Primary md:block text-3xl" />
         </div>
         <div className="flex justify-between md:hidden">
+          <div className="flex space-x-4 pr-4">
+            <Link
+              href={"/login"}
+              className=" text font-bold text-Primary hover:text-Primary/70 lg:text-xl"
+            >
+              Login
+            </Link>
+            <button className=" text font-bold text-Secondary bg-Primary rounded-full px-2 py-1 baseline hover:bg-Primary/70 text-sm">
+              Sign Up
+            </button>
+            <TbWorld className="hidden text-Primary md:block text-3xl" />
+          </div>
           <button onClick={toggelHamburger} className="flex md:hidden">
-            <RxHamburgerMenu className="md:hidden text-3xl text-Primary" />
+            {!openHamburger && (
+              <RxHamburgerMenu className="md:hidden text-3xl text-Primary" />
+            )}
+            {openHamburger && (
+              <IoMdClose className="md:hidden text-3xl text-Primary" />
+            )}
           </button>
           {openHamburger && (
             <div className="md:hidden">
@@ -94,14 +112,6 @@ export default function Navbar() {
                   className="text font-bold text-Primary hover:text-Primary/70 lg:text-xl"
                 >
                   About
-                </Link>
-              </div>
-              <div className="flex space-x-6">
-                <Link
-                  href={"/login"}
-                  className="hidden text font-bold text-Primary md:block hover:text-Primary/70 lg:text-xl"
-                >
-                  Login
                 </Link>
               </div>
             </div>
