@@ -1,13 +1,18 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { TbWorld } from "react-icons/tb";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
+import classnames from 'classnames';
+
 
 export default function Navbar() {
   const [openHamburger, setOpenHamburger] = useState(false);
+
+  const currentPath = usePathname();
 
   const links = [
     { label: "Home", href: "/" },
@@ -49,7 +54,10 @@ export default function Navbar() {
           {links.map((link) => (
             <Link
               href={link.href}
-              className="text font-bold text-Primary hover:text-Primary/70 py-1 lg:text-xl"
+              className = {classnames({
+                'bg-Secondary px-2 rounded-xl': link.href === currentPath,
+                'text font-bold text-Primary hover:text-Primary/70 py-1 lg:text-xl': true
+              })}
             >
               {link.label}
             </Link>
@@ -108,7 +116,10 @@ export default function Navbar() {
                 {links.map((link) => (
                   <Link
                     href={link.href}
-                    className="text font-bold text-Primary hover:text-Primary/70 lg:text-xl"
+                    className = {classnames({
+                      'bg-Secondary px-2 rounded-xl': link.href === currentPath,
+                      'text font-bold text-Primary hover:text-Primary/70 py-1 lg:text-xl': true
+                    })}
                   >
                     {link.label}
                   </Link>
