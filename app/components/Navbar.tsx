@@ -6,8 +6,7 @@ import { useState } from "react";
 import { TbWorld } from "react-icons/tb";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
-import classnames from 'classnames';
-
+import clsx from "clsx";
 
 export default function Navbar() {
   const [openHamburger, setOpenHamburger] = useState(false);
@@ -54,9 +53,10 @@ export default function Navbar() {
           {links.map((link) => (
             <Link
               href={link.href}
-              className = {classnames({
-                'bg-Secondary px-2 rounded-xl': link.href === currentPath,
-                'text font-bold text-Primary hover:text-Primary/70 py-1 lg:text-xl': true
+              className={clsx({
+                "bg-Secondary px-2 rounded-xl": link.href === currentPath,
+                "text font-bold text-Primary hover:text-Primary/70 py-1 lg:text-xl":
+                  true,
               })}
             >
               {link.label}
@@ -116,9 +116,10 @@ export default function Navbar() {
                 {links.map((link) => (
                   <Link
                     href={link.href}
-                    className = {classnames({
-                      'bg-Secondary px-2 rounded-xl': link.href === currentPath,
-                      'text font-bold text-Primary hover:text-Primary/70 py-1 lg:text-xl': true
+                    className={clsx({
+                      "bg-Secondary px-2 rounded-xl": link.href === currentPath,
+                      "text font-bold text-Primary hover:text-Primary/70 py-1 lg:text-xl":
+                        true,
                     })}
                   >
                     {link.label}
