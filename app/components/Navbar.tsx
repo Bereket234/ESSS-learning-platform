@@ -1,13 +1,19 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { TbWorld } from "react-icons/tb";
 import { useState } from "react";
+import { TbWorld } from "react-icons/tb";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 
 export default function Navbar() {
   const [openHamburger, setOpenHamburger] = useState(false);
+
+  const links = [
+    { label: "Home", href: "/" },
+    { label: "Courses", href: "/courses" },
+    { label: "About", href: "/about" },
+  ];
 
   const toggelHamburger = () => {
     setOpenHamburger((value) => !value);
@@ -40,24 +46,14 @@ export default function Navbar() {
       {/* Desktop Navigation Links  */}
       <div className="flex container justify-between">
         <div className="hidden md:flex space-x-6 pl-6 lg:pl-14 pr-5">
-          <Link
-            href={"/home"}
-            className="text font-bold text-Primary hover:text-Primary/70 py-1 lg:text-xl"
-          >
-            Home
-          </Link>
-          <Link
-            href={"/courses"}
-            className="text font-bold text-Primary hover:text-Primary/70 py-1 lg:text-xl"
-          >
-            Courses
-          </Link>
-          <Link
-            href={"/about"}
-            className="text font-bold text-Primary hover:text-Primary/70 py-1 lg:text-xl"
-          >
-            About
-          </Link>
+          {links.map((link) => (
+            <Link
+              href={link.href}
+              className="text font-bold text-Primary hover:text-Primary/70 py-1 lg:text-xl"
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
         <div className="flex space-x-6 items-center">
           <Link
@@ -109,24 +105,14 @@ export default function Navbar() {
                 id="menu"
                 className="absolute flex flex-col items-center self-end py-6 mt-12 space-y-6 font-bold bg-Tertiary sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
               >
-                <Link
-                  href={"/home"}
-                  className="text font-bold text-Primary hover:text-Primary/70 lg:text-xl"
-                >
-                  Home
-                </Link>
-                <Link
-                  href={"/courses"}
-                  className="text font-bold text-Primary hover:text-Primary/70 lg:text-xl"
-                >
-                  Courses
-                </Link>
-                <Link
-                  href={"/about"}
-                  className="text font-bold text-Primary hover:text-Primary/70 lg:text-xl"
-                >
-                  About
-                </Link>
+                {links.map((link) => (
+                  <Link
+                    href={link.href}
+                    className="text font-bold text-Primary hover:text-Primary/70 lg:text-xl"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
               </div>
             </div>
           )}
