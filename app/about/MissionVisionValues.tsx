@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-export default function Section3() {
+export default function MissionVisionValues() {
   return (
-    <div className=" relative flex flex-col text-2xl font-SofiaProSemiBold text-Primary bg-Tertiary">
+    <div className=" relative flex flex-col text-2xl font-SofiaProSemiBold text-Primary bg-Tertiary pb-5">
       <Image
-        src="/assets/images/mission.svg"
+        src="/assets/images/about/mission.svg"
         width={450}
         height={450}
         alt="mission"
@@ -27,7 +27,7 @@ export default function Section3() {
         thriving space science community.
       </p>
       <Image
-        src="assets/images/vision.svg"
+        src="assets/images/about/vision.svg"
         width={450}
         height={450}
         alt="vision"
@@ -43,10 +43,10 @@ export default function Section3() {
             resources, supported by experts in the field.
           </p>
           <Image
-            src="/assets/images/values.svg"
+            src="/assets/images/about/values.svg"
             width={450}
             height={450}
-            className="absolute left-96 bottom-44"
+            className="absolute left-96 bottom-48"
             alt="values"
           />
           <p className=" max-w-xl text-center">

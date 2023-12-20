@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import styles from './About.module.css';
 
-export default function Section2() {
+export default function Quest() {
   return (
     <div className="flex flex-col md:flex-row">
       <div className="pl-20 py-10 overflow-visible min-w-fit ">
         <Image
-          src="/assets/images/combined.png"
+          src="/assets/images/about/combined.png"
           alt="picture"
           width={900}
           height={900}
@@ -15,14 +16,14 @@ export default function Section2() {
 
       <div
         style={{ lineHeight: 0.85 }}
-        className=" flex-col font-AbolitionTestRegular text-4xl text-center text-Primary pt-24 pl-0 ml-0"
+        className= {`flex-col font-AbolitionTestRegular text-4xl text-center text-Primary pt-24 pl-0 ml-0 ${styles.lineHeight}`}
       >
-        <p style={{ fontSize: "6em" }}>TAKING</p>
-        <p style={{ fontSize: "6em" }}>YOU ON</p>
-        <p style={{ fontSize: "6em" }}>A</p>
+        <p className={styles.questFont}>TAKING</p>
+        <p className={styles.questFont}>YOU ON</p>
+        <p className={styles.questFont}>A</p>
         <div className="flex items-center justify-center mb-20">
           <Image
-            src="/assets/images/quest.png"
+            src="/assets/images/about/quest.png"
             alt="picture"
             width={480}
             height={300}
