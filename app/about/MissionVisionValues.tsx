@@ -9,7 +9,7 @@ export default function MissionVisionValues() {
         height={450}
         alt="mission"
         className="absolute ml-20"
-      ></Image>
+      />
       <div className="flex w-full justify-end pr-24">
         <p className=" max-w-4xl text-center mt-20 px-10">
           Democratizing space science and technology education. We are committed
@@ -32,7 +32,7 @@ export default function MissionVisionValues() {
         height={450}
         alt="vision"
         className="absolute right-24 top-72"
-      ></Image>
+      />
       <div className="flex flex-col mt-60">
         <div className="flex justify-center space-x-32 mb-14">
           <p className=" max-w-lg text-center rotate-1">
