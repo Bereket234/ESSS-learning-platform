@@ -1,15 +1,15 @@
-import Image from "next/image";
+import Image from 'next/image';
+import styles from './About.module.css';
 
-function Section1() {
+function WhoAreWe() {
   return (
     <div className="flex flex-col bg-Tertiary px-4 pt-5 sm:px-5 md:px-10 lg:flex-row ">
       <div
-        style={{ lineHeight: 0.85 }}
-        className="flex-col lg:flex-1 mt-10 leading-none md:text-4xl text-Primary font-AbolitionTestRegular"
+        className={`flex-col lg:flex-1 mt-10 leading-none md:text-4xl text-Primary font-AbolitionTestRegular ${styles.lineHeight}`}
       >
-        <p style={{ fontSize: "6.5em" }}>WHO</p>
-        <p style={{ fontSize: "6.5em" }}>ARE</p>
-        <p style={{ fontSize: "6.5em" }}>WE?</p>
+        <p className={styles.whoAreWeText}>WHO</p>
+        <p className={styles.whoAreWeText}>ARE</p>
+        <p className={styles.whoAreWeText}>WE?</p>
       </div>
       <div className="flex lg:w-3/4 mt-4 pt-5 justify-center items-start lg:pt-1 lg:justify-start lg:px-7">
         <div className="flex flex-col text-center justify-center font-SofiaProMediumItalic text-Primary text-lg md:text-xl">
@@ -18,7 +18,6 @@ function Section1() {
               src="/assets/images/learning.png"
               height={100}
               width={300}
-              objectFit="contain"
               alt="logo"
             />
             <p className="max-w-4xl">
@@ -34,10 +33,9 @@ function Section1() {
           </div>
           <div className="flex items-center">
             <Image
-              src="/assets/images/group_pic.png"
+              src="/assets/images/about/group_pic.png"
               height={1000}
               width={1000}
-              objectFit="contain"
               alt="Group Picture"
             />
           </div>
@@ -47,4 +45,4 @@ function Section1() {
   )
 }
 
-export default Section1
+export default WhoAreWe
