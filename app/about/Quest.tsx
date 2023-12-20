@@ -15,7 +15,6 @@ export default function Quest() {
       </div>
 
       <div
-        style={{ lineHeight: 0.85 }}
         className= {`flex-col font-AbolitionTestRegular text-4xl text-center text-Primary pt-24 pl-0 ml-0 ${styles.lineHeight}`}
       >
         <p className={styles.questFont}>TAKING</p>
