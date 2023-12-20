@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styles from './About.module.css';
 
-function WhoAreWe() {
+export default function WhoAreWe() {
   return (
     <div className="flex flex-col bg-Tertiary px-4 pt-5 sm:px-5 md:px-10 lg:flex-row ">
       <div
@@ -45,4 +45,3 @@ function WhoAreWe() {
   )
 }
 
-export default WhoAreWe
