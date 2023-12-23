@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import React from 'react'
 import learningLogo from '@/public/assets/images/HomePage/Group 128@2x.png'
 import femaleTeacher from '@/public/assets/images/HomePage/Group 33@2x.png'
 import cube from '@/public/assets/images/HomePage/Group 16.svg'
@@ -9,21 +8,16 @@ import triangularPrism from '@/public/assets/images/HomePage/Group 14.svg'
 import hexagonFilled from '@/public/assets/images/HomePage/Path 707.svg'
 import rotatedTriangle from '@/public/assets/images/HomePage/Polygon 1.svg'
 
-import { Poppins } from "next/font/google"
 import Link from 'next/link'
 
-const poppins = Poppins({
-    weight: ['600'],
-    style: 'italic',
-    subsets: ['latin']
-})
+
 
 
 
 const HeroSection = () => {
 
     return (
-        <section className='flex h-[40vh] min-h-[450px] md:min-h-[800px] md:h-[70vh] lg:h-[95vh]  bg-Tertiary '>
+        <section className='flex h-[40vh] min-h-[450px] md:min-h-[600px] md:h-[70vh] lg:h-[95vh]  bg-Tertiary '>
             <div className='flex w-full '>
                 <div className="relative flex w-full   flex-col flex-1 justify-center items-center">
                     <Image
