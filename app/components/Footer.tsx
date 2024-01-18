@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="w-full">
       <section className="flex flex-col text-Secondary bg-Primary sm:w-full sm:h-[500] md:w-full md:h-[700] lg:w-full lg:h-[900]">
-        <div className="flex sm:w-[450] md:w-[600] lg:w-[900]">
+        <div className="flex sm:w-[450] sm:h-[100] md:w-[600] md:h-[150] lg:w-[900] lg:h-[200]">
           {/* About ESSS */}
           <div className="flex flex-col w-full sm:w-[300] sm:h-[100] md:w-1/2 md:h-[150] lg:w-1/2 lg:h-[200]">
             <Image
