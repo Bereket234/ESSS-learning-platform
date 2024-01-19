@@ -1,3 +1,4 @@
+import ExploreSection from "./components/homePage/ExploreSection";
 import GetStarted from "./components/homePage/GetStarted";
 import HeroSection from "./components/homePage/HeroSection";
 import { Poppins } from "next/font/google";
@@ -14,6 +15,7 @@ export default function Home() {
     <div className={poppins.className}>
       <HeroSection />
       <GetStarted />
+      <ExploreSection />
 
     </div>
   )
