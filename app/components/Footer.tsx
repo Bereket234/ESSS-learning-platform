@@ -20,7 +20,7 @@ const Footer = () => {
               alt="Logo"
               width={280}
               height={110}
-              className="flex items-center p-2 sm:w-[150px] sm:h-[120px] md:h-[120px] md:w-[250px] lg:h-[150px] lg:w-[250px] mt-4"
+              className="flex items-center p-2 sm:w-[150px] sm:h-[120px] md:h-[120px] md:w-[250px] lg:h-[150px] lg:w-[250px] mt-6"
             />
 
             <div className="hidden font-small items-left font-SofiaProExtraLight p-4 md:flex md:w-[450px] md:h-[150px] lg:w-[550px] lg:h-[300px] mx-4">
