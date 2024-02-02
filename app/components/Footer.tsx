@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
 
           {/* Sections */}
-          <div className="flex flex-row px-2 pt-2 mt-4 sm:w-full sm:h-[100px] sm:text-xs md:w-full md:h-[300] md:text-base lg:w-[700px] lg:h-[200px] lg:text-lg font-SofiaProRegular ml-24">
+          <div className="flex flex-row px-2 pt-2 mt-4 sm:w-full sm:h-[100px] sm:text-xs md:w-full md:h-[300px] md:text-base lg:w-[700px] lg:h-[200px] lg:text-lg font-SofiaProRegular ml-24">
             <div className="flex flex-col items-center justify-center px-8 sm:w-[150px] sm:h-[100px] md:w-[400px] md:h-[150px] lg:w-[300px] lg:h-[150px]">
               <ul className="p-4">
                 <li className="py-2">Home</li>
@@ -64,7 +64,7 @@ const Footer = () => {
 
         <div className="border-b-2 border-light border-Secondary p-4 mx-8"></div>
 
-        <div className="flex sm:h-[100px] sm:w-[700px] md:w-[100] md:h-[200px] lg:h-[200px] lg:w-full">
+        <div className="flex sm:h-[100px] sm:w-[700px] md:w-[100px] md:h-[200px] lg:h-[200px] lg:w-full">
           <div className="flex flex-col w-3/4 justify-between items-end sm:h-[250px] sm:w-[350px] md:w-[400px] md:h-[250px] lg:h-[150px] lg:w-[1000px] ">
             <ul className="font-SofiaProLightItalic text-lg">
               <li className="p-2 text-center">Powered By:</li>
