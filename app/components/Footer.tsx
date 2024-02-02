@@ -10,20 +10,20 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="w-full">
-      <section className="flex flex-col text-Secondary bg-Primary sm:w-full sm:h-[500] md:w-full md:h-[700] lg:w-full lg:h-[900]">
-        <div className="flex sm:w-[450] sm:h-[100] md:w-[600] md:h-[150] lg:w-[900] lg:h-[200]">
+    <footer>
+      <section className="flex flex-col text-Secondary bg-Primary sm:w-full sm:h-[200px] md:w-full md:h-[300px] lg:w-full lg:h-[350px]">
+        <div className="flex sm:w-[150px] sm:h-[100px] md:w-[600px] md:h-[150px] lg:w-full lg:h-[200px]">
           {/* About ESSS */}
-          <div className="flex flex-col w-full sm:w-[300] sm:h-[100] md:w-1/2 md:h-[150] lg:w-1/2 lg:h-[200]">
+          <div className="flex flex-col sm:w-[300px] sm:h-[100px] md:w-[400px] md:h-[250px] lg:w-[500px] lg:h-[200px]">
             <Image
-              src={"/assets/images/esss-learning.png"}
+              src={"/assets/images/footer/esss-learning.png"}
               alt="Logo"
               width={280}
               height={110}
-              className="flex items-center p-2 sm:w-[300] sm:h-[100] md:h-[100] md:w-[400] lg:h-[110] lg:w-[500] mt-4"
+              className="flex items-center p-2 sm:w-[150px] sm:h-[120px] md:h-[120px] md:w-[250px] lg:h-[150px] lg:w-[250px] mt-4"
             />
 
-            <div className="hidden font-small items-left font-SofiaProExtraLight p-4 md:flex md:w-[300] md:h-[200] lg:w-[600] lg:h-[400]">
+            <div className="hidden font-small items-left font-SofiaProExtraLight p-4 md:flex md:w-[450px] md:h-[150px] lg:w-[550px] lg:h-[300px] mx-4">
               <p>
                 Learning is a new initiative by the Ethiopian Space Science
                 Society (ESSS), dedicated to making space science and technology
@@ -35,8 +35,8 @@ const Footer = () => {
           </div>
 
           {/* Sections */}
-          <div className="flex flex-row px-2 pt-2 mt-4 sm:w-[400] sm:h-[100] sm:text-xs md:w-[600] md:h-[300] md:text-base lg:w-[700] lg:h-[400] lg:text-lg font-SofiaProRegular">
-            <div className="flex flex-col items-center justify-center px-8  sm:w-[350] sm:h-[300] md:w-[550] md:h-[400] lg:w-[700] lg:h-[600]">
+          <div className="flex flex-row px-2 pt-2 mt-4 sm:w-full sm:h-[100px] sm:text-xs md:w-full md:h-[300] md:text-base lg:w-[700px] lg:h-[200px] lg:text-lg font-SofiaProRegular ml-24">
+            <div className="flex flex-col items-center justify-center px-8 sm:w-[150px] sm:h-[100px] md:w-[400px] md:h-[150px] lg:w-[300px] lg:h-[150px]">
               <ul className="p-4">
                 <li className="py-2">Home</li>
                 <li className="py-2">Courses</li>
@@ -44,7 +44,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="flex flex-col items-center justify-center px-8 sm:w-[100] sm:h-[300] md:w-[550] md:h-[400] lg:w-[700] lg:h-[600]">
+            <div className="flex flex-col items-center justify-center px-8 sm:w-[150px] sm:h-[100px] md:w-[400px] md:h-[150px] lg:w-[450px] lg:h-[150px]">
               <ul className="p-4">
                 <li className="py-2">ESSS Main Page</li>
                 <li className="py-2">About ESSS</li>
@@ -52,22 +52,20 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="flex flex-col items-center justify-center px-8 sm:w-[350] sm:h-[300] md:w-[550] md:h-[400] lg:w-[700] lg:h-[600]">
+            <div className="flex flex-col items-center justify-center px-8 sm:w-[150px] sm:h-[100px] md:w-[400px] md:h-[150px] lg:w-[450px] lg:h-[150px]">
               <ul className="p-4">
                 <li className="py-2">ESSS Science</li>
                 <li className="py-2">Working Groups</li>
                 <li className="py-2">ESSS Branches</li>
               </ul>
             </div>
-
-            <div className="boarder"></div>
           </div>
         </div>
 
         <div className="border-b-2 border-light border-Secondary p-4 mx-8"></div>
 
-        <div className="flex sm:h-[300] sm:w-[550] md:w-[750] md:h-[500] lg:h-[700] lg:w-[950]">
-          <div className="flex flex-col w-3/4 justify-between items-end sm:h-[250] sm:w-[500] md:w-[700] md:h-[450] lg:h-[650] lg:w-[900] ">
+        <div className="flex sm:h-[100px] sm:w-[700px] md:w-[100] md:h-[200px] lg:h-[200px] lg:w-full">
+          <div className="flex flex-col w-3/4 justify-between items-end sm:h-[250px] sm:w-[350px] md:w-[400px] md:h-[250px] lg:h-[150px] lg:w-[1000px] ">
             <ul className="font-SofiaProLightItalic text-lg">
               <li className="p-2 text-center">Powered By:</li>
               <li className=" font-SofiaProUltraLight mr-6">
@@ -78,24 +76,24 @@ const Footer = () => {
           </div>
 
           {/* Contacts */}
-          <div className="flex flex-col items-end w-1/2 justify-end sm:w-[200] sm:h-[100] md:w-[400] md:h-[250] lg:h-[350] lg:w-[400]">
-            <div className="text-Secondary flex items-center justify-end SofiaProRegular mr-6">
+          <div className="flex flex-col w-1/4 items-end justify-end sm:w-[350px] sm:h-[50px] md:w-[450px] md:h-[50px] lg:h-[100px] lg:w-[550px] ml-24">
+            <div className="flex items-end justify-ceneter SofiaProRegular mr-6">
               @officialess
             </div>
-            <div className="text-Secondary flex gap-1 px-6 mb-4 justy-between items-center">
-              <Link href="https://facebook.com" passHref>
+            <div className="flex gap-1 px-6 mb-4 justy-between items-center">
+              <Link href="https://www.facebook.com/officialesss">
                 <FaFacebook size={15} />
               </Link>
-              <Link href="https://instagram.com" passHref>
+              <Link href="https://www.instagram.com/officialesss/">
                 <FaInstagram size={15} />
               </Link>
-              <Link href="https://youtube.com" passHref>
+              <Link href="https://www.youtube.com/c/EthiopianSpaceScienceSociety">
                 <FaYoutube size={15} />
               </Link>
-              <Link href="https://telegram.com" passHref>
+              <Link href="https://t.me/officialesss">
                 <FaTelegram size={15} />
               </Link>
-              <Link href="https://twitter.com" passHref>
+              <Link href="https://twitter.com/officialesss">
                 <FaXTwitter size={15} />
               </Link>
             </div>
