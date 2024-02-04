@@ -1,4 +1,3 @@
-import React from "react";
 import { TfiSearch } from "react-icons/tfi";
 
 const CoursesBar = () => {

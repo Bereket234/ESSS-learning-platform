@@ -1,6 +1,6 @@
 import Image from "next/image";
-import React from "react";
-import CourseButton from "./components/courses/CourseButton";
+import CourseButton from "./courses/CourseButton";
+import styles from "./courses/courses.module.css";
 
 interface CourseProps {
   id: number;
@@ -10,14 +10,15 @@ interface CourseProps {
 
 const Course = ({ title, description }: CourseProps) => {
   return (
-    <div className="card-wrapper flex flex-col p-2 rounded-xl bg-white w-[330px] sm:w-[310px] md:w-[360px] lg:w-[230px] xl:w-[270px] 2xl:w-[350px] shadow-[0px_3px_6px_#00000029]">
+    <div className="flex flex-col p-2 rounded-xl bg-white w-[330px] sm:w-[310px] md:w-[360px] lg:w-[230px] xl:w-[270px] 2xl:w-[350px] shadow-[0px_3px_6px_#00000029]">
       <div className="course-img-container w-full h-15 rounded-xl">
         <Image
           src="/assets/images/imgg.jpg"
           alt={title}
-          width={100}
+          width={600}
           height={80}
-          className="course-img object-cover rounded-2xl"
+          objectFit="contain"
+          className="course-img object-cover rounded-2xl flex-1"
         />
       </div>
       <h3 className="course-title self-start font-SofiaProBold font-bold my-2">

@@ -1,13 +1,5 @@
-import React, { useEffect, useState } from "react";
-import Course from "../../Course";
-
-interface coursesDataProps {
-  coursesData: Array<{
-    id: number;
-    title: string;
-    description: string;
-  }>;
-}
+import Course from "../Course";
+import { coursesDataProps } from "@/types/dynamic-courses/types";
 
 const CourseList = ({ coursesData }: coursesDataProps) => {
   return (

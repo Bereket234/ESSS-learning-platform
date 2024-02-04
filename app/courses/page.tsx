@@ -20,7 +20,7 @@ const course = async () => {
   const coursesData = await fetchCoursesData();
 
   return (
-    <>
+    <div className="overflow-hidden">
       <CoursesBar />
       <CurrentCourse />
       <div className="courses-list pt-3 pb-8 px-[10px] md:px-[20px] lg:px-[30px] xl:px-[44px] xl:px-[80px] bg-Tertiary mb-20">
@@ -30,7 +30,7 @@ const course = async () => {
         <CourseList coursesData={coursesData.products} />
         <CourseButton style="bg-Secondary mt-8" innerText="See more" />
       </div>
-    </>
+    </div>
   );
 };
 

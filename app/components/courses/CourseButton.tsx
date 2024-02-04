@@ -1,9 +1,4 @@
-import React from "react";
-interface CourseButtonProps {
-  style: string;
-  innerText: string;
-}
-
+import { CourseButtonProps } from "@/types/dynamic-courses/types";
 const CourseButton = ({ style, innerText }: CourseButtonProps) => {
   return (
     <button

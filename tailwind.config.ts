@@ -43,10 +43,9 @@ const config: Config = {
         Tertiary: "#F8F7F4",
         Secondary: "#E0F869",
         Primary: "#072434",
-        White: "#fff",
       },
     },
-    plugins: [require("daisyui")],
+    plugins: [],
   },
 };
 export default config;
