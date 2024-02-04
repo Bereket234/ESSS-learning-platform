@@ -1,6 +1,6 @@
 'use client'
 import Lottie from "lottie-react";
-import animatedArrow from '@/public/assets/animations/homePage/dzdrsyvLv7.json'
+import animatedArrow from '@/public/assets/animations/home_Page/arrow.json'
 
 
 const LottiePlayer = () => {

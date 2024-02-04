@@ -1,22 +1,22 @@
 import Image from "next/image";
-import learningLogo from "@/public/assets/images/HomePage/Group 128@2x.png";
-import femaleTeacher from "@/public/assets/images/HomePage/Group 33@2x.png";
-import cube from "@/public/assets/images/HomePage/Group 16.svg";
-import circles from "@/public/assets/images/HomePage/Group 19.svg";
-import hexagon from "@/public/assets/images/HomePage/Group 5.svg";
-import triangularPrism from "@/public/assets/images/HomePage/Group 14.svg";
-import hexagonFilled from "@/public/assets/images/HomePage/Path 707.svg";
-import rotatedTriangle from "@/public/assets/images/HomePage/Polygon 1.svg";
+import learningLogo from "@/public/assets/images/home_page/Group 128@2x.png";
+import femaleTeacher from "@/public/assets/images/home_page/Group 33@2x.png";
+import cube from "@/public/assets/images/home_page/Group 16.svg";
+import circles from "@/public/assets/images/home_page/Group 19.svg";
+import hexagon from "@/public/assets/images/home_page/Group 5.svg";
+import triangularPrism from "@/public/assets/images/home_page/Group 14.svg";
+import hexagonFilled from "@/public/assets/images/home_page/Path 707.svg";
+import rotatedTriangle from "@/public/assets/images/home_page/Polygon 1.svg";
 
 import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="flex h-[40vh] min-h-[450px] md:min-h-[600px] md:h-[70vh] lg:h-[95vh]  bg-Tertiary ">
+    <section className="flex h-[40vh] min-h-[450px] md:min-h-[600px] md:h-[70vh] lg:h-[95vh] bg-Tertiary ">
       <div className="flex w-full ">
         <div className="relative flex w-full flex-col flex-1 justify-center items-center">
           <Image
-            className="absolute  w-1/4 bottom-0 translate-y-1/2 left-0 translate-x-1/2"
+            className="absolute w-1/4 bottom-0 translate-y-1/2 left-0 translate-x-1/2"
             src={hexagon}
             alt="hexagon"
           />
@@ -44,7 +44,7 @@ const HeroSection = () => {
               src={learningLogo}
               alt="learning logo"
             />
-            <button className=" text-Secondary  lg:mr-11 mt-6   bg-Primary rounded-full px-2.5 py-2 md:px-4 md:py-2  lg:px-5 lg:py-3 hover:bg-Secondary hover:text-Primary lg:text-2xl md:text-xl ">
+            <button className=" text-Secondary lg:mr-11 mt-6 bg-Primary rounded-full px-2.5 py-2 md:px-4 md:py-2 lg:px-5 lg:py-3 hover:bg-Secondary hover:text-Primary lg:text-2xl md:text-xl ">
               <Link href="/register">Get Started</Link>
             </button>
           </div>
