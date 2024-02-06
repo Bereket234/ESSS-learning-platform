@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const SignIn = () => {
   return (
-    <div className="grid grid-cols-3 bg-Tertiary mt-6">
+    <div className="grid  border grid-cols-3 bg-Tertiary mt-6">
       <div className="grid grid-cols-2 relative">
         <div className="bg-Primary"></div>
         <div className="bg-Tertiary"></div>
@@ -29,7 +29,7 @@ const SignIn = () => {
         </div>
 
         <div className="flex flex-col w-3/4 p-2">
-          <button className="flext bg-Secondary md:w-[500px] lg:w-[500px] rounded-full p-4 text-Primary text-lg font-semibold">
+          <button className="flext bg-Secondary rounded-full p-4 text-Primary text-lg font-semibold">
             Signin with Google
           </button>
           <div className="flex items-right justify-center ml-24 text-Primary text-lg font-SofiaProSemiBold p-2">
