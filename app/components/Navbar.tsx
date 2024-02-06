@@ -52,6 +52,7 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-6 pl-6 lg:pl-14 pr-5">
           {links.map((link) => (
             <Link
+              key={link.label}
               href={link.href}
               className={clsx({
                 "bg-Secondary px-2 rounded-xl": link.href === currentPath,

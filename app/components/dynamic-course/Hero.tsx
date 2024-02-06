@@ -1,0 +1,31 @@
+import Image from "next/image";
+
+const Hero = () => {
+  return (
+    <section className="bg-[url('/assets/images/dynamic-courses/hero-bg.png')] relative rounded-l-md">
+      <Image
+        src="/assets/images/dynamic-courses/space-shuttle.png"
+        width={1972}
+        height={500}
+        alt="background image"
+        className="object-contain z-10"
+      />
+
+      <div className="absolute right-1 sm:right-10 lg:right-20 bottom-1 sm:bottom-5">
+        <h1 className="font-SofiaProSemiBold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-Primary">
+          Space Exploration
+        </h1>
+
+        <p className="text-Primary text-xl sm:text-2xl font-SofiaProMedium sm:mt-5 lg:mt-9">
+          Course Length
+        </p>
+
+        <p className="font-SofiaProSemiBold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-Primary">
+          2Hrs 35 Mins
+        </p>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
