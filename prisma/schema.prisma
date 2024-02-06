@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Courses {
+  id           String       @id @default(uuid()) @map("_id") @db.ObjectId
+  courseName   String       @unique
+  courseLength Int
+  description  String       @unique
+  imageUrl     String
+  cardImageUrl String
+  level        String
+  progress     Int
+  subCourses   SubCourses[]
+}
+
+model SubCourses {
+  id              String  @id @default(uuid()) @map("_id") @db.ObjectId
+  subCourseName   String  @unique
+  subCourseLength Int
+  description     String  @unique
+  imageUrl        String
+  status          String
+  part            Int     @unique
+  youtubeVideoUrl String  @unique
+  course          Courses @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  courseId        String  @db.ObjectId
+}
