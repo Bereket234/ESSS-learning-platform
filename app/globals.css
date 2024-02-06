@@ -120,3 +120,12 @@
     url("../public/fonts/SofiaProMedium-Italic.ttf") format("ttf"),
     url("../public/fonts/SofiaProMedium-Italic.woff") format("woff");
 }
+
+@font-face {
+  font-family: "AbolitionTestRegular";
+  src: url("../public/fonts/AbolitionTest-Regular.eot") format("eot"),
+    url("../public/fonts/AbolitionTest-Regular.ttf") format("ttf"),
+    url("../public/fonts/AbolitionTest-Regular.woff") format("woff");
+  font-weight:100;
+}
+

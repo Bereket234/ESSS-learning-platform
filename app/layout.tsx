@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import StoreProvider from "@/store/storeprovider";
 
 const poppins = Poppins({
   subsets: ["latin", "latin-ext", "devanagari"],
@@ -20,11 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={poppins.className}>
-        <Navbar />
-        {children}
-      </body>
-    </html>
+    <StoreProvider>
+      <html lang="en">
+        <body className={poppins.className}>
+          <Navbar />
+          {children}
+        </body>
+      </html>
+    </StoreProvider>
   );
 }
