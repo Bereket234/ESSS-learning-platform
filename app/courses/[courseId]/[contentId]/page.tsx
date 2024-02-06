@@ -15,7 +15,7 @@ const page = ({
 
   return (
     <section className="px-4 py-6 w-full xl:border-l-2">
-      <div className="aspect-video max-w-6xl mx-auto rounded-3xl">
+      <div className="aspect-video max-w-6xl xl:max-w-4xl 2xl:max-w-6xl mx-auto rounded-3xl">
         <VideoPlayer vidLink={videos[currentPage]} />
       </div>
     </section>
