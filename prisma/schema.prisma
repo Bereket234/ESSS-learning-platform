@@ -29,7 +29,7 @@ model SubCourses {
   description     String  @unique
   imageUrl        String
   status          String
-  part            Int     @unique
+  part            Int
   youtubeVideoUrl String  @unique
   course          Courses @relation(fields: [courseId], references: [id], onDelete: Cascade)
   courseId        String  @db.ObjectId
