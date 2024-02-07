@@ -1,27 +1,30 @@
-import Card from "@app/components/explore/dynamic explore/Card";
+import Card from "@/app/components/explore/dynamic-explore/Card";
 
-export default function Page({ params }: { params: { level: string } }) {
+const Page = ({ params }: { params: { level: string } }) => {
   const cardData = [
     {
-      Image: "/assets/images/explore/BeginningPage.png",
-      title: "Card 1",
-      description: "Description for Card 1",
+      Image: "/assets/images/explore/beginner.png",
+      title: "Space Exploration",
+      description:
+        "Deep dive into the world of space exploration. Get to know the history, missions, and cutting-edge technology...",
     },
     {
-      Image: "/assets/images/explore/IntermediatePage.png",
-      title: "Card 2",
-      description: "Description for Card 2",
+      Image: "/assets/images/explore/intermediate.png",
+      title: "Space Engineering",
+      description:
+        "Deep dive into the world of space exploration. Get to know the history, missions, and cutting-edge technology...",
     },
     {
-      Image: "/assets/images/explore/RelativeAdvancedPage.png",
-      title: "Card 3",
-      description: "Description for Card 3",
+      Image: "/assets/images/explore/advanced.png",
+      title: "Cosmology",
+      description:
+        "Deep dive into the world of space exploration. Get to know the history, missions, and cutting-edge technology...",
     },
   ];
 
   return (
     <>
-      <div>
+      <div className="flex gap-11 mb-[424px] p-8 justify-between ">
         {cardData.map((card) => (
           <Card
             key={card.title}
@@ -31,6 +34,9 @@ export default function Page({ params }: { params: { level: string } }) {
           />
         ))}
       </div>
+      <></>
     </>
   );
-}
+};
+
+export default Page;
