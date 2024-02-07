@@ -1,0 +1,42 @@
+.scrollbar_hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar_hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* BACK TO TOP */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.back_to_top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(224, 248, 105, 0.5);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+}
+.back_to_top span {
+	color: #fff;
+	font-size: 3rem;
+	transition: 0.2s ease-out;
+}
+
+.back_to_top:hover {
+	background-color: rgba(224, 248, 105, 0.5);;
+}
+.back-to-top:hover span {
+	transform: translateY(-4px);
+}
+

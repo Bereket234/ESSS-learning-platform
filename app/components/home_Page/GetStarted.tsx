@@ -1,7 +1,7 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
-const LottiePlayer = dynamic(() => import("./LottiePlayer"), {  ssr: false });
+const LottiePlayer = dynamic(() => import("./LottiePlayer"), { ssr: false });
 
 const GetStarted = () => {
   return (
@@ -17,7 +17,7 @@ const GetStarted = () => {
         </div>
       </div>
       <div className="flex flex-1 h-full  ">
-        <div className="flex ml-3 w-full md:w-[80%] justify-center text-center md:text-left flex-col ">
+        <div className="flex ml-3 w-full md:w-[80%] justify-center text-center md:text-left flex-col">
           <h1 className="font-AbolitionTestRegular font-bold [font-size:_clamp(45px,6vw,100px)] tracking-wider">
             Become a Member
           </h1>
