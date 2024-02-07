@@ -3,11 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import { useSelector } from "react-redux";
 import { cardData } from "@/types/dynamic-courses/types";
 import SubCoursesCard from "./SubCoursesCard";
+import { RootState } from "@/store/store";
 
 const SideBar = ({ id }: { id: string }) => {
   const pathName = usePathname();
+  const isSidebar = useSelector((state: RootState) => state.isSidebar.value);
 
   const cardData: cardData[] = [
     {
@@ -20,7 +23,7 @@ const SideBar = ({ id }: { id: string }) => {
     },
     {
       key: "2",
-      src: "/boat-on-the-lake-at-sunset-beautiful-summer-landscape-with-fishing-boat.jpg",
+      src: "/assets/images/dynamic-courses/boat-on-the-lake-at-sunset-beautiful-summer-landscape-with-fishing-boat.jpg",
       vidLength: "15:49",
       part: "Part 2",
       title: "Exploring other worlds: What to expect",
@@ -28,7 +31,7 @@ const SideBar = ({ id }: { id: string }) => {
     },
     {
       key: "3",
-      src: "/istockphoto-1200499809-612x612.jpg",
+      src: "/assets/images/dynamic-courses/istockphoto-1200499809-612x612.jpg",
       vidLength: "15:49",
       part: "Part 3",
       title: "How Rockets Work: Can you make one?",
@@ -36,7 +39,7 @@ const SideBar = ({ id }: { id: string }) => {
     },
     {
       key: "4",
-      src: "/istockphoto.jpg",
+      src: "/assets/images/dynamic-courses/istockphoto.jpg",
       vidLength: "15:49",
       part: "Part 4",
       title: "Ai and Space Exploration: It's role",
@@ -45,8 +48,12 @@ const SideBar = ({ id }: { id: string }) => {
   ];
 
   return (
-    <div className="xl:sticky xl:top-16 xl:self-start">
-      <div className="xl:overflow-y-auto xl:max-h-screen xl:max-w-md grid sm:grid-cols-2 lg:grid-cols-3 min-[1160px]:grid-cols-4 xl:flex xl:flex-col gap-3 mx-6 xl:pt-10 pt-5 border-t-2">
+    <div
+      className={clsx("xl:sticky xl:top-16 xl:self-start xl:min-w-[450px]", {
+        hidden: !isSidebar,
+      })}
+    >
+      <div className="xl:overflow-y-auto xl:max-h-screen xl:max-w-md grid grid-cols-2 lg:grid-cols-3 min-[1160px]:grid-cols-4 xl:flex xl:flex-col gap-3 mx-6 xl:pt-10 pt-5 border-t-2">
         {cardData.map((data) => (
           <Link
             href={`/courses/${id}/${data.key}`}

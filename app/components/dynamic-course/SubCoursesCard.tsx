@@ -19,16 +19,16 @@ const SubCoursesCard = (props: cardData) => {
       </div>
 
       <div>
-        <h3 className="font-SofiaProSemiBold text-3xl text-Primary">
+        <h3 className="font-SofiaProSemiBold sm:text-3xl text-lg text-Primary">
           {props.part}
         </h3>
 
-        <p className="font-SofiaProLightItalic xl:text-sm min-[1350]:text-base text-Quaternary xl:pb-2">
+        <p className="font-SofiaProLightItalic text-sm xl:text-sm min-[1350]:text-base text-Quaternary xl:pb-2">
           {props.title}
         </p>
 
         <div className="flex items-center gap-3">
-          <p className="font-SofiaProLightItalic xl:text-sm min-[1350]:text-base text-Primary">
+          <p className="font-SofiaProLightItalic text-xs xl:text-sm min-[1350]:text-base text-Primary">
             {props.status}
           </p>
           <span

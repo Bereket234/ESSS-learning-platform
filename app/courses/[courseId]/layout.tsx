@@ -18,8 +18,6 @@ export default function Layout({
   children: React.ReactNode;
   params: { courseId: string; contentId: string };
 }) {
-  const toggleSidebar = true;
-
   return (
     <html lang="en">
       <body>
@@ -28,17 +26,11 @@ export default function Layout({
 
           <Heading />
 
-          <div className="xl:flex">
-            <div
-              className={clsx("basis-[450px] shrink-0", {
-                hidden: !toggleSidebar,
-              })}
-            >
-              <SideBar id={params.courseId} />
-            </div>
+          <section className="xl:flex">
+            <SideBar id={params.courseId} />
 
             {children}
-          </div>
+          </section>
         </main>
       </body>
     </html>
