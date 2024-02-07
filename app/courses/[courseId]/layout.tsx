@@ -24,7 +24,9 @@ export default function Layout({
         <main>
           <Hero />
 
-          <Heading />
+          <section className="md:px-10 px-5">
+            <Heading />
+          </section>
 
           <section className="xl:flex">
             <SideBar id={params.courseId} />

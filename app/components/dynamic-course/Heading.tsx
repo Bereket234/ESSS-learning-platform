@@ -15,8 +15,9 @@ const Heading = () => {
 
   return (
     <div
-      className={clsx("py-3 px-10 flex gap-10 items-center", {
+      className={clsx("py-3 flex gap-10 items-center", {
         "xl:sticky xl:top-0 z-10 bg-white xl:max-w-[455px]": isSidebar,
+        "border-b-2": !isSidebar,
       })}
     >
       <h2 className="font-SofiaProSemiBold text-3xl">Sub-Courses</h2>
