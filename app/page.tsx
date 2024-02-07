@@ -1,4 +1,5 @@
 import BackToTopSection from "./components/home_Page/BackToTopSection";
+import CourseSection from "./components/home_Page/CourseSection";
 import ExploreSection from "./components/home_Page/ExploreSection";
 import FeaturedCourse from "./components/home_Page/FeaturedCourse";
 import GetCertified from "./components/home_Page/GetCertified";
@@ -14,9 +15,10 @@ export default function Home() {
       <GetStarted />
       <ExploreSection />
       <GetCertified />
+      <CourseSection/>
       <FeaturedCourse/>
       <RegisterSection/>
-      <MentorSection/>
+      {/* <MentorSection/> */}
       <BackToTopSection/>
     </div>
   );

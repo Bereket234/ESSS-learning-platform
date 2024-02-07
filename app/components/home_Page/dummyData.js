@@ -40,46 +40,97 @@ export const mentors = [
   {
     title: "person_1",
     imageUrl: "/assets/images/home_page/side_view_1.png",
-    background_color: "red"
+    background_color: "red",
   },
   {
     title: "person_2",
     imageUrl: "/assets/images/home_page/side_view_2.png",
-    background_color: "red"
+    background_color: "red",
   },
   {
     title: "person_3",
     imageUrl: "/assets/images/home_page/side_view_3.png",
-    background_color: "red"
+    background_color: "red",
   },
   {
     title: "person_4",
     imageUrl: "/assets/images/home_page/side_view_2.png",
-    background_color: "red"
+    background_color: "red",
   },
   {
     title: "person_5",
     imageUrl: "/assets/images/home_page/side_view_1.png",
-    background_color: "red"
+    background_color: "red",
   },
   {
     title: "person_6",
     imageUrl: "/assets/images/home_page/side_view_3.png",
-    background_color: "red"
+    background_color: "red",
   },
   {
     title: "person_6",
     imageUrl: "/assets/images/home_page/side_view_3.png",
-    background_color: "red"
+    background_color: "red",
   },
   {
     title: "person_6",
     imageUrl: "/assets/images/home_page/side_view_3.png",
-    background_color: "red"
+    background_color: "red",
   },
   {
     title: "person_6",
     imageUrl: "/assets/images/home_page/side_view_3.png",
-    background_color: "red"
+    background_color: "red",
+  },
+];
+
+export const courseData = [
+  {
+    alt: "Space Engineering",
+    title: "Space Engineering",
+    imageUrl: "/assets/images/home_page/space_1.jpg",
+    href: "space_eng",
+  },
+  {
+    alt: "Cosmnout",
+    title: "Cosmnout",
+    imageUrl: "/assets/images/home_page/cosmnout.jpg",
+    href: "cosmnout",
+  },
+  {
+    alt: "Astro Chemistry",
+    title: "Astro Chemistry",
+    imageUrl: "/assets/images/home_page/astro_chemistry.jpg",
+    href: "astroChemistry",
+  },
+  {
+    alt: "Planetary Science",
+    title: "Planetary Science",
+    imageUrl: "/assets/images/home_page/planetary_science.jpg",
+    href: "planetaryScience",
+  },
+  {
+    alt: "Space Engineering",
+    title: "Space Engineering",
+    imageUrl: "/assets/images/home_page/space_1.jpg",
+    href: "space_eng",
+  },
+  {
+    alt: "Cosmnout",
+    title: "Cosmnout",
+    imageUrl: "/assets/images/home_page/cosmnout.jpg",
+    href: "cosmnout",
+  },
+  {
+    alt: "Astro Chemistry",
+    title: "Astro Chemistry",
+    imageUrl: "/assets/images/home_page/astro_chemistry.jpg",
+    href: "astroChemistry",
+  },
+  {
+    alt: "Planetary Science",
+    title: "Planetary Science",
+    imageUrl: "/assets/images/home_page/planetary_science.jpg",
+    href: "planetaryScience",
   },
 ];

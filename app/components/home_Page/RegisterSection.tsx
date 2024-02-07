@@ -4,7 +4,7 @@ import React from "react";
 
 const RegisterSection = () => {
   return (
-    <section className="relative items-center min-h-[400px]  lg:min-h-[600px] flex justify-end h-[60vh]">
+    <section className="relative items-center flex justify-end h-[40vh] md:h-[60vh] min-h-[400px]  lg:min-h-[600px]">
       <div className="absolute z-[-1] w-2/3 h-[140%] left-0 top-[-100px]  lg:top-[-35] flex justify-center items-center">
         <Image
           src="/assets/images/home_page/group_180@2x.png"
@@ -20,7 +20,7 @@ const RegisterSection = () => {
         <p className="hidden md:block mt-5 [font-size:_clamp(20px,1.5vw,35px)] leading-9 text-xl">
           Find courses you could be interested in, & start learning right away
         </p>
-        <div className="flex  flex-col lg:flex-row bjustify-around md:w-full">
+        <div className="flex  flex-col lg:flex-row max-w-[15rem] lg:max-w-none md:w-full">
           <button className=" text-Secondary lg:mr-11 mt-6 bg-Primary rounded-full px-2.5 py-2 md:px-2 md:py-2 lg:px-5 lg:py-3 hover:bg-Secondary hover:text-Primary lg:text-2xl md:text-xl ">
             <Link href="/register">Get Started</Link>
           </button>

@@ -51,7 +51,7 @@ const HeroSection = () => {
             </button>
           </div>
         </div>
-        <div className="flex items-end justify-center w-full flex-1 ">
+        <div className="bg-slate-50 h-full flex items-end justify-center w-full flex-1 ">
           <div className="relative bottom-0 max-w-[600px] right-0 w-full aspect-[6/7]  ">
             <Image
               className="absolute bottom-0 "
@@ -61,14 +61,14 @@ const HeroSection = () => {
               alt="femaleTeacher"
             />
             <Image
-              className="absolute top-0 right-0 translate-x-[-10%] w-2/5 "
+              className="absolute lg:top-10 right-0 translate-x-[-10%] w-2/5 "
               src="/assets/images/home_page/group_19.svg"
               width={100}
               height={100}
               alt="circles"
             />
             <Image
-              className="absolute hover:animate-pulse top-0 left-[-10%] w-1/6 "
+              className="absolute hover:animate-pulse lg:top-10 left-[-10%] w-1/6 "
               src="/assets/images/home_page/group_16.svg"
               width={100}
               height={100}

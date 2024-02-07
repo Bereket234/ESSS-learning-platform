@@ -15,6 +15,7 @@ html {
 }
 
 .back_to_top {
+  scroll-behavior: smooth;
   position: fixed;
   bottom: 2rem;
   right: 2rem;
@@ -28,15 +29,14 @@ html {
   transition: 0.2s ease-out;
 }
 .back_to_top span {
-	color: #fff;
-	font-size: 3rem;
-	transition: 0.2s ease-out;
+  color: #fff;
+  font-size: 3rem;
+  transition: 0.2s ease-out;
 }
 
 .back_to_top:hover {
-	background-color: rgba(224, 248, 105, 0.5);;
+  background-color: rgba(224, 248, 105, 0.5);
 }
 .back-to-top:hover span {
-	transform: translateY(-4px);
+  transform: translateY(-4px);
 }
-
