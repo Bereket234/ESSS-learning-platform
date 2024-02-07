@@ -1,17 +1,16 @@
-import Hero from "@app/components/explore/dynamic explore/Hero";
+import Hero from "@/app/components/explore/dynamic-explore/Hero";
 
-export default function Layout({
+const Layout = ({
   children,
   params,
 }: {
   children: React.ReactNode;
   params: { level: string };
-}) {
-  return (
-    <>
-      {/* <Nav /> */}
-      <Hero level={params.level} />
-      {children}
-    </>
-  );
-}
+}) => (
+  <>
+    <Hero level={params.level} />
+    {children}
+  </>
+);
+
+export default Layout;
