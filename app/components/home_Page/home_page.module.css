@@ -8,12 +8,6 @@
   scrollbar-width: none; /* Firefox */
 }
 
-/* BACK TO TOP */
-
-html {
-  scroll-behavior: smooth;
-}
-
 .back_to_top {
   scroll-behavior: smooth;
   position: fixed;
