@@ -1,4 +1,3 @@
-import Image from "next/image";
 import MentorCard from "./MentorCard";
 import { mentors } from "./dummyData";
 import styles from "./home_page.module.css";
