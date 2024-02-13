@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import clsx from "clsx";
 import "@/app/globals.css";
-import "@/app/courses/[courseId]/CourseId.module.css";
 import Hero from "@/app/components/dynamic-course/Hero";
 import SideBar from "@/app/components/dynamic-course/SideBar";
 import Heading from "@/app/components/dynamic-course/Heading";
@@ -21,7 +19,7 @@ export default function Layout({
   return (
     <html lang="en">
       <body>
-        <main>
+        <main className="scroll">
           <Hero />
 
           <section className="md:px-10 px-5">
