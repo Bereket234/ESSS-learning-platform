@@ -20,15 +20,20 @@ export default function Layout({
     <html lang="en">
       <body>
         <main className="scroll">
+          {/* hero section that has details of the course */}
           <Hero />
 
+          {/* heading that controls sidebar toggle */}
           <section className="md:px-10 px-5">
             <Heading />
           </section>
 
+          {/* section with course content */}
           <section className="xl:flex">
+            {/* sidebar to navigate between sub-courses */}
             <SideBar id={params.courseId} />
 
+            {/* course content like video */}
             {children}
           </section>
         </main>
