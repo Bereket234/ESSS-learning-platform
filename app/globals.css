@@ -126,6 +126,27 @@
   src: url("../public/fonts/AbolitionTest-Regular.eot") format("eot"),
     url("../public/fonts/AbolitionTest-Regular.ttf") format("ttf"),
     url("../public/fonts/AbolitionTest-Regular.woff") format("woff");
-  font-weight:100;
+  font-weight: 100;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  height: 50%;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
