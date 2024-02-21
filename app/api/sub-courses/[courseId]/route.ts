@@ -14,6 +14,13 @@ export const GET = async (
       where: { courseId: params.courseId },
     });
 
+    if (!subCourses) {
+      return NextResponse.json(
+        { message: "No Subcourse Found for This Course" },
+        { status: 404 }
+      );
+    }
+
     return NextResponse.json({ subCourses }, { status: 200 });
   } catch (err: any) {
     return NextResponse.json({ err: err.message }, { status: 500 });
