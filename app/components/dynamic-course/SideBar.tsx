@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { useSelector } from "react-redux";
-import { cardData } from "@/types/dynamic-courses/types";
+import { cardData } from "@/types/dynamic-courses";
 import SubCoursesCard from "./SubCoursesCard";
 import { RootState } from "@/store/store";
 

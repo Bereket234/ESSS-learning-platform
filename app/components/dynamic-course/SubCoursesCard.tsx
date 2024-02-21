@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { cardData } from "@/types/dynamic-courses/types";
+import { cardData } from "@/types/dynamic-courses";
 import clsx from "clsx";
 
 const SubCoursesCard = (props: cardData) => {
