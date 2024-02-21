@@ -24,7 +24,11 @@ export default function RootLayout({
     <StoreProvider>
       <html lang="en">
         <body className={poppins.className}>
-          <Navbar />
+          <header>
+            <Navbar />
+          </header>
+
+          {/* main page content */}
           {children}
         </body>
       </html>
