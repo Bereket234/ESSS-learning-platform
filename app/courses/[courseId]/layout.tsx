@@ -17,27 +17,23 @@ export default function Layout({
   params: { courseId: string; contentId: string };
 }) {
   return (
-    <html lang="en">
-      <body>
-        <main className="scroll">
-          {/* hero section that has details of the course */}
-          <Hero />
+    <main>
+      {/* hero section that has details of the course */}
+      <Hero />
 
-          {/* heading that controls sidebar toggle */}
-          <section className="md:px-10 px-5">
-            <Heading />
-          </section>
+      {/* heading that controls sidebar toggle */}
+      <section className="md:px-10 px-5">
+        <Heading />
+      </section>
 
-          {/* section with course content */}
-          <section className="xl:flex">
-            {/* sidebar to navigate between sub-courses */}
-            <SideBar id={params.courseId} />
+      {/* section with course content */}
+      <section className="xl:flex">
+        {/* sidebar to navigate between sub-courses */}
+        <SideBar id={params.courseId} />
 
-            {/* course content like video */}
-            {children}
-          </section>
-        </main>
-      </body>
-    </html>
+        {/* course content like video */}
+        {children}
+      </section>
+    </main>
   );
 }
