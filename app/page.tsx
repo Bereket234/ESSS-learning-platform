@@ -10,16 +10,16 @@ import RegisterSection from "./components/home_Page/RegisterSection";
 
 export default function Home() {
   return (
-    <div>
+    <main>
       <HeroSection />
       <GetStarted />
       <ExploreSection />
       <GetCertified />
-      <CourseSection/>
-      <FeaturedCourse/>
-      <RegisterSection/>
+      <CourseSection />
+      <FeaturedCourse />
+      <RegisterSection />
       {/* <MentorSection/> */}
-      <BackToTopSection/>
-    </div>
+      <BackToTopSection />
+    </main>
   );
 }
