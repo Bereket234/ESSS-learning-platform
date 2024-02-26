@@ -8,7 +8,7 @@ export default function MissionVisionValues() {
         width={450}
         height={450}
         alt="mission"
-        className="absolute ml-20"
+        className="hidden absolute ml-20 md:block"
       />
       <div className="flex w-full justify-end pr-24">
         <p className=" max-w-4xl text-center mt-20 px-10">
