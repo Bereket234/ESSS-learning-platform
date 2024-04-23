@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Home = () => {
+const Explore = () => {
   return (
     <div className="pt-10 p-20">
       <div>
@@ -38,4 +38,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Explore;
