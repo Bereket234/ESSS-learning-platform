@@ -6,7 +6,7 @@ const Hero = ({ level }: { level: string }) => {
   return (
     <section className="relative">
       <div
-        className={`bg-[url("/assets/images/explore/level/hero_background.png")] relative rounded-tl-2xl overflow-hidden bg-cover bg-center `}
+        className={`bg-[url("/assets/images/explore/level/hero_background.png")] relative rounded-tl-2xl overflow-hidden bg-cover bg-center`}
       >
         <Image
           src={imageUrl}
@@ -15,12 +15,12 @@ const Hero = ({ level }: { level: string }) => {
           height={489}
         />
 
-        <div className="absolute bottom-0 right-0 pr-16">
-          <h2 className="font-SofiaProSemiBold text-Secondary text-[116px] text-left pt-60">
+        <div className="absolute bottom-0 right-0 pr-4 md:pr-16">
+          <h2 className="font-SofiaProSemiBold text-Secondary text-2xl md:text-[10vw] min-[500px]:text-5xl sm:text-6xl text-left pt-16 md:pt-24">
             {level}
           </h2>
-          <h3 className="font-SofiaProMedium text-Secondary text-[38px] text-left pt-0 pb-9 mt-0">
-            Explore our {level} friendly courses
+          <h3 className="font-SofiaProMedium text-Secondary text-base md:text-[4vw] min-[500px]:text-2xl sm:text-3xl text-left pb-3 md:pb-9 md:mt-5">
+            Explore our {level} courses
           </h3>
         </div>
       </div>
