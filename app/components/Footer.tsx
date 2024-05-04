@@ -8,6 +8,7 @@ import {
   FaTelegram,
 } from "react-icons/fa6";
 
+
 const Footer = () => {
   return (
       <footer className="text-Secondary bg-Primary py-4">
