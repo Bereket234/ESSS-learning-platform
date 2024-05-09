@@ -33,6 +33,7 @@ const config: Config = {
         Tertiary: "#F8F7F4",
         Secondary: "#E0F869",
         Primary: "#072434",
+        Senary:"#03800C"
       },
     },
     plugins: [],
