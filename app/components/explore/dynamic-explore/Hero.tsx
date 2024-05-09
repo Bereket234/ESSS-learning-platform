@@ -6,7 +6,7 @@ const Hero = ({ level }: { level: string }) => {
   return (
     <section className="relative">
       <div
-        className={`bg-[url("/assets/images/explore/level/hero_background.png")] relative rounded-tl-2xl overflow-hidden bg-cover bg-center`}
+        className={`bg-[url("/assets/images/explore/level/hero_background.png")] relative overflow-hidden bg-cover bg-center`}
       >
         <Image
           src={imageUrl}

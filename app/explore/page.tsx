@@ -1,7 +1,10 @@
 import Link from "next/link";
+import CoursesBar from "../components/courses/CoursesBar";
 
 const Explore = () => {
   return (
+    <div>
+    <CoursesBar />
     <div className="pt-10 p-20">
       <div>
         <h1 className="font-SofiaProMedium text-4xl mb-[59px] ">
@@ -34,6 +37,7 @@ const Explore = () => {
           </div>
         </Link>
       </div>
+    </div>
     </div>
   );
 };
