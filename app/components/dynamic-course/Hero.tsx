@@ -11,7 +11,7 @@ const Hero = () => {
         className="object-contain z-10"
       />
 
-      <div className="absolute right-1 sm:right-10 lg:right-20 bottom-1 sm:bottom-5">
+      <div className="absolute right-1 sm:right-10 lg:right-20 -bottom-1 sm:bottom-5">
         <h1 className="font-SofiaProSemiBold text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-Primary">
           Space Exploration
         </h1>

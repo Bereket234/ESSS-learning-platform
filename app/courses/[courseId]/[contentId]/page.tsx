@@ -1,9 +1,9 @@
 import VideoPlayer from "@/app/components/dynamic-course/VideoPlayer";
 
-const SubCourseContent = ({
+const SubCoursePage = ({
   params,
 }: {
-  params: { courseId: string; contentId: string };
+  params: { courseId: string; contentId: string; moduleId: string };
 }) => {
   const currentPage = parseInt(params.contentId) - 1;
   const videos = [
@@ -22,4 +22,4 @@ const SubCourseContent = ({
   );
 };
 
-export default SubCourseContent;
+export default SubCoursePage;

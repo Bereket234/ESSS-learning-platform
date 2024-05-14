@@ -1,49 +1,53 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useParams } from "next/navigation";
 import clsx from "clsx";
 import { useSelector } from "react-redux";
 import { cardData } from "@/types/dynamic-courses/types";
 import SubCoursesCard from "./SubCoursesCard";
 import { RootState } from "@/store/store";
 
-const SideBar = ({ id }: { id: string }) => {
+const SideBar = () => {
   const pathName = usePathname();
   const isSidebar = useSelector((state: RootState) => state.isSidebar.value);
+  const params = useParams();
 
   const cardData: cardData[] = [
     {
       key: "1",
-      src: "/assets/images/dynamic-courses/space-shuttle.png",
-      vidLength: "15:49",
-      part: "Part 1",
+      part: "1",
       title: "Introduction to space exploration",
-      status: "In Progress",
     },
     {
       key: "2",
-      src: "/assets/images/dynamic-courses/boat-on-the-lake-at-sunset-beautiful-summer-landscape-with-fishing-boat.jpg",
-      vidLength: "15:49",
-      part: "Part 2",
-      title: "Exploring other worlds: What to expect",
-      status: "Not Started",
+      part: "2",
+      title: "The Solar System",
     },
     {
       key: "3",
-      src: "/assets/images/dynamic-courses/istockphoto-1200499809-612x612.jpg",
-      vidLength: "15:49",
-      part: "Part 3",
-      title: "How Rockets Work: Can you make one?",
-      status: "Completed",
+      part: "3",
+      title: "The Inter-Stellar Space",
     },
     {
       key: "4",
-      src: "/assets/images/dynamic-courses/istockphoto.jpg",
-      vidLength: "15:49",
-      part: "Part 4",
-      title: "Ai and Space Exploration: It's role",
-      status: "Completed",
+      part: "4",
+      title: "The Voyager Mission",
+    },
+    {
+      key: "5",
+      part: "5",
+      title: "How far can we sail the Universe",
+    },
+    {
+      key: "6",
+      part: "6",
+      title: "Edges of the Universe",
+    },
+    {
+      key: "7",
+      part: "7",
+      title: "The Quantum World",
     },
   ];
 
@@ -53,30 +57,28 @@ const SideBar = ({ id }: { id: string }) => {
         hidden: !isSidebar,
       })}
     >
-      <div className="xl:overflow-y-auto xl:max-h-screen xl:max-w-md grid grid-cols-2 lg:grid-cols-3 min-[1160px]:grid-cols-4 xl:flex xl:flex-col gap-3 mx-6 xl:pt-10 pt-5 border-t-2">
+      <div className="xl:overflow-y-auto xl:max-h-screen xl:max-w-md items-start grid grid-cols-2 lg:grid-cols-3 min-[1160px]:grid-cols-4 xl:flex xl:flex-col gap-3 mx-6 xl:pt-10 pt-5 border-t-2">
         {cardData.map((data) => (
           <Link
-            href={`/courses/${id}/${data.key}`}
+            href={`/courses/${params.courseId}/${data.key}`}
             key={data.key}
-            className={clsx("rounded-lg", {
-              "hover:bg-slate-100/70":
-                pathName !== `/courses/${id}/${data.key}`,
-              "bg-Secondary": pathName === `/courses/${id}/${data.key}`,
+            className={clsx("rounded-lg bg-white", {
+              "hover:bg-Secondary":
+                pathName !== `/courses/${params.courseId}/${data.key}`,
+              "bg-Secondary":
+                pathName === `/courses/${params.courseId}/${data.key}`,
             })}
           >
             <SubCoursesCard
               key={data.key}
-              src={data.src}
-              vidLength={data.vidLength}
               title={data.title}
               part={data.part}
-              status={data.status}
             />
           </Link>
         ))}
-
-        <hr className="xl:my-12 my-5 mx-6" />
       </div>
+
+      <hr className="my-5 mx-6" />
     </div>
   );
 };
