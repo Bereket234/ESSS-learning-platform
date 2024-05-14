@@ -1,8 +1,11 @@
 export type cardData = {
   key: string;
-  src: string;
-  vidLength: string;
   part: string;
   title: string;
-  status: "In Progress" | "Not Started" | "Completed";
+};
+
+export type moduleCard = {
+  key: string;
+  title: string;
+  description: string;
 };

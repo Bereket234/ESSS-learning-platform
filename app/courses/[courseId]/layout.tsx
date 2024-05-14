@@ -17,19 +17,17 @@ export default function Layout({
   params: { courseId: string; contentId: string };
 }) {
   return (
-    <main>
+    <main className="bg-Tertiary">
       {/* hero section that has details of the course */}
       <Hero />
 
       {/* heading that controls sidebar toggle */}
-      <section className="md:px-10 px-5">
-        <Heading />
-      </section>
+      <Heading />
 
       {/* section with course content */}
       <section className="xl:flex">
         {/* sidebar to navigate between sub-courses */}
-        <SideBar id={params.courseId} />
+        <SideBar />
 
         {/* course content like video */}
         {children}
