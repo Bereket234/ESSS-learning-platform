@@ -30,7 +30,7 @@ export default function Layout({
         <SideBar />
 
         {/* course content like video */}
-        {children}
+        <div className="w-full xl:border-l-2"> {children}</div>
       </section>
     </main>
   );

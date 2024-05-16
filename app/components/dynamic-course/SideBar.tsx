@@ -57,13 +57,13 @@ const SideBar = () => {
         hidden: !isSidebar,
       })}
     >
-      <div className="xl:overflow-y-auto xl:max-h-screen xl:max-w-md items-start grid grid-cols-2 lg:grid-cols-3 min-[1160px]:grid-cols-4 xl:flex xl:flex-col gap-3 mx-6 xl:pt-10 pt-5 border-t-2">
+      <div className="xl:overflow-y-auto xl:max-h-screen xl:max-w-md items-stretch grid grid-cols-2 lg:grid-cols-3 min-[1160px]:grid-cols-4 xl:flex xl:flex-col gap-3 mx-6 xl:pt-10 pt-5 border-t-2">
         {cardData.map((data) => (
           <Link
             href={`/courses/${params.courseId}/${data.key}`}
             key={data.key}
-            className={clsx("rounded-lg bg-white", {
-              "hover:bg-Secondary":
+            className={clsx("rounded-lg", {
+              "hover:bg-Secondary bg-white":
                 pathName !== `/courses/${params.courseId}/${data.key}`,
               "bg-Secondary":
                 pathName === `/courses/${params.courseId}/${data.key}`,
