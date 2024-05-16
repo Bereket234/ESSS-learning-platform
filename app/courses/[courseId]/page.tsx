@@ -2,6 +2,7 @@ import { TiHome } from "react-icons/ti";
 import { BsDot } from "react-icons/bs";
 
 import SubCourseDescriptionCard from "@/app/components/dynamic-course/SubCourseDescriptionCard";
+import { subCourseTypeNoPart } from "@/types/dynamic-courses/types";
 
 const CoursePage = ({
   params,
@@ -11,7 +12,7 @@ const CoursePage = ({
   const level = "Intermidiate";
   const title = "Space Exploration";
 
-  const subCourses = [
+  const subCourses: subCourseTypeNoPart[] = [
     {
       key: "1",
       part: "1",
@@ -255,16 +256,16 @@ const CoursePage = ({
   ];
 
   return (
-    <div className="mx-auto max-w-6xl xl:max-w-4xl 2xl:max-w-6xl rounded-3xl text-Primary p-5">
-      <div className="flex gap-5 items-center">
+    <div className="mx-auto max-w-6xl xl:max-w-4xl 2xl:max-w-6xl rounded-3xl text-Primary px-5 py-2">
+      <div className="flex sm:gap-3 items-center">
         <TiHome size={40} />
         <BsDot size={40} className="pt-2" />
-        <p className="pt-3 font-SofiaProMedium text-2xl lg:text-[28px] text-Primary">
+        <p className="pt-3 font-SofiaProMedium text-base sm:text-2xl lg:text-[28px] text-Primary">
           {level}
         </p>
       </div>
 
-      <h2 className="font-SofiaProSemiBold text-3xl lg:text-[45px] my-4">
+      <h2 className="font-SofiaProSemiBold text-2xl sm:text-3xl lg:text-[45px] my-4">
         {title}
       </h2>
 
