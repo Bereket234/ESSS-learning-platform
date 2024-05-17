@@ -29,4 +29,15 @@ export type subCourseTypeNoPart = {
   part: string;
   title: string;
   modules: moduleCard[];
-}
+};
+
+export type choisesType = {
+  key: string;
+  choice: string;
+};
+
+export type questionsType = {
+  key: string;
+  question: string;
+  choices: choisesType[];
+};

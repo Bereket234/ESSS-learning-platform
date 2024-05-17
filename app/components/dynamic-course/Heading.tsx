@@ -16,25 +16,27 @@ const Heading = () => {
   return (
     <div
       className={clsx(
-        "md:px-10 px-5 bg-Tertiary py-3 flex gap-10 items-center",
+        "md:px-10 px-5 border-Quinary bg-Tertiary py-2 sm:py-3 lg:px-5 flex gap-10 items-center",
         {
           "xl:sticky xl:top-0 z-10 xl:max-w-sm": isSidebar,
-          "border-b-2": !isSidebar,
+          "border-b ": !isSidebar,
         },
       )}
     >
-      <h2 className="font-SofiaProSemiBold text-3xl">Sub-Courses</h2>
+      <h2 className="font-SofiaProSemiBold text-xl sm:text-2xl md:text-3xl">
+        Sub-Courses
+      </h2>
 
       {isSidebar ? (
         <IoIosArrowDropdownCircle
           size={30}
-          className="mt-2 rounded-full text-Secondary bg-Primary hover:cursor-pointer"
+          className="rounded-full text-Secondary bg-Primary hover:cursor-pointer w-5 h-5 sm:w-6 sm:h-6 md:w-[30px] md:h-[30px]"
           onClick={() => dispatch(toggleSidebar())}
         />
       ) : (
         <IoIosArrowDroprightCircle
           size={30}
-          className="mt-2 rounded-full hover:cursor-pointer"
+          className="rounded-full hover:cursor-pointer w-5 h-5 sm:w-6 sm:h-6"
           onClick={() => dispatch(toggleSidebar())}
         />
       )}

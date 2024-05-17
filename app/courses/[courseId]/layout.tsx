@@ -14,7 +14,7 @@ export default function Layout({
   params,
 }: {
   children: React.ReactNode;
-  params: { courseId: string; contentId: string };
+  params: { courseId: string; contentId: string; moduleId: string };
 }) {
   return (
     <main className="bg-Tertiary">
