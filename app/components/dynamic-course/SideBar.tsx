@@ -62,12 +62,17 @@ const SideBar = () => {
           <Link
             href={`/courses/${params.courseId}/${data.key}`}
             key={data.key}
-            className={clsx("rounded-lg", {
-              "hover:bg-Secondary bg-white":
-                pathName !== `/courses/${params.courseId}/${data.key}`,
-              "bg-Secondary":
-                pathName === `/courses/${params.courseId}/${data.key}`,
-            })}
+            className={`rounded-lg 
+                ${
+                  pathName === `/courses/${params.courseId}/${data.key}` ||
+                  (!!params.moduleId &&
+                    pathName.includes(
+                      `/courses/${params.courseId}/${data.key}/${params.moduleId}`,
+                    ))
+                    ? "bg-Secondary"
+                    : "hover:bg-Secondary bg-white"
+                }
+            `}
           >
             <SubCoursesCard
               key={data.key}
@@ -78,7 +83,7 @@ const SideBar = () => {
         ))}
       </div>
 
-      <hr className="my-5 mx-6" />
+      <hr className="my-5 mx-6 text-Quinary" />
     </div>
   );
 };
