@@ -11,13 +11,13 @@ import {
 
 const Footer = () => {
   return (
-      <footer className="text-Secondary bg-Primary py-4">
+      <footer className="text-Secondary bg-Primary py-4 mt-12">
         <div className=" mx-auto px-4 lg:px-0"> 
         <div className="flex flex-col md:flex-row justify-between">
           {/* About ESSS */}
           <div className="w-full md:mb-0">
             <Image
-              src={"/assets/images/footer/esss-learning.png"}
+              src={"/assets/images/footer/esss-logo.png"}
               alt="Logo"
               width={180}
               height={80}
