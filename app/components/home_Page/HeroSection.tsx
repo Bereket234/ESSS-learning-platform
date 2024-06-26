@@ -4,7 +4,10 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="flex h-[40vh] min-h-[450px] md:min-h-[600px] md:h-[70vh] lg:h-[95vh] bg-Tertiary" id="heroSection">
+    <section
+      className="flex h-[40vh] min-h-[450px] md:min-h-[600px] md:h-[70vh] lg:h-[95vh] bg-Tertiary"
+      id="heroSection"
+    >
       <div className="flex w-full ">
         <div className="relative flex w-full flex-col flex-1 justify-center items-center">
           <Image
