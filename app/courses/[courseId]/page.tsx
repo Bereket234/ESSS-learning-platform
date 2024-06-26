@@ -259,18 +259,21 @@ const CoursePage = ({
     <div className="mx-auto max-w-6xl xl:max-w-4xl 2xl:max-w-6xl rounded-3xl text-Primary px-5 py-2">
       <div className="flex sm:gap-3 items-center">
         <TiHome size={40} />
+
         <BsDot size={40} className="pt-2" />
-        <p className="pt-3 font-SofiaProMedium text-base sm:text-2xl lg:text-[28px] text-Primary">
+
+        <p className="pt-3 font-SofiaProMedium text-base sm:text-2xl text-Primary">
           {level}
         </p>
       </div>
 
-      <h2 className="font-SofiaProSemiBold text-2xl sm:text-3xl lg:text-[45px] my-4">
+      <h2 className="font-SofiaProSemiBold text-2xl sm:text-3xl lg:text-4xl my-4">
         {title}
       </h2>
 
       {subCourses.map((subCourse) => (
         <SubCourseDescriptionCard
+          key={subCourse.key}
           part={subCourse.part}
           title={subCourse.title}
           modules={subCourse.modules}

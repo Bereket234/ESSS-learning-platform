@@ -475,23 +475,23 @@ const modulePage = ({
 
   return (
     <div className="mx-auto max-w-6xl xl:max-w-4xl 2xl:max-w-6xl px-4 py-3 w-full text-Primary mb-3">
-      <div className="flex sm:gap-3 items-center mb-8">
+      <div className="flex flex-wrap sm:gap-3 items-center mb-8">
         <TiHome size={40} className="sm:w-10 sm:h-10 w-8 h-8" />
 
         <BsDot size={40} className="pt-2 sm:w-10 sm:h-10 w-8 h-8" />
 
-        <p className="pt-3 font-SofiaProMedium text-base sm:text-2xl lg:text-[28px] text-Primary">
+        <p className="pt-3 font-SofiaProMedium text-base sm:text-xl text-Primary">
           {level}
         </p>
 
         <BsDot size={40} className="pt-2 sm:w-10 sm:h-10 w-8 h-8" />
 
-        <p className="pt-3 font-SofiaProMedium text-base sm:text-2xl lg:text-[28px] text-Primary">
+        <p className="pt-3 font-SofiaProMedium text-base sm:text-xl text-Primary">
           {subCourse.title}
         </p>
       </div>
 
-      <h2 className="font-SofiaProSemiBold text-2xl sm:text-3xl lg:text-[45px] my-6">
+      <h2 className="font-SofiaProSemiBold text-2xl sm:text-3xl my-6">
         {`Sub-Course ${subCourse.part}: ${subCourse.title}`}
       </h2>
 
@@ -516,16 +516,16 @@ const modulePage = ({
         )}
       </div>
 
-      <div className="flex items-center gap-3 sm:gap-9 justify-end mt-8">
-        <button className="bg-white text-Primary rounded-[7px] border border-Primary px-2 py-1 sm:py-2 sm:px-4 font-SofiaProRegular text-sm sm:text-[18px]">
+      <div className="flex items-center gap-3 sm:gap-9 justify-end mt-8 text-xs md:text-sm lg:text-lg">
+        <button className="bg-white text-Primary rounded-[7px] border border-Primary px-2 py-1 sm:py-2 sm:px-4 font-SofiaProRegular">
           Prev. Section
         </button>
 
-        <button className="bg-Primary rounded-[7px] text-white px-2 py-1 sm:py-2 border border-Primary sm:px-4 font-SofiaProRegular text-sm sm:text-[18px]">
+        <button className="bg-Primary rounded-[7px] text-white px-2 py-1 sm:py-2 border border-Primary sm:px-4 font-SofiaProRegular">
           Mark as Complete
         </button>
 
-        <button className="bg-white rounded-[7px] text-Primary px-2 py-1 sm:py-2 border border-Primary sm:px-4 font-SofiaProRegular text-sm sm:text-[18px]">
+        <button className="bg-white rounded-[7px] text-Primary px-2 py-1 sm:py-2 border border-Primary sm:px-4 font-SofiaProRegular">
           Next Section
         </button>
       </div>

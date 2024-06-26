@@ -11,14 +11,15 @@ const SubCourseDescriptionCard = ({
 }) => {
   return (
     <div className="border-l-8 rounded-lg text-Primary border-Primary bg-white px-5 py-4 my-4">
-      <h2 className="font-SofiaProSemiBold text-lg lg:text-[22px] mb-4">
-        Sub-Course {part}: <span className="font-SofiaProRegular">{title}</span>
+      <h2 className="font-SofiaProSemiBold border-b pb-4 sm:max-w-[80%] md:max-w-[60%] text-lg lg:text-xl mb-4">
+        Sub-Course {part}:{" "}
+        <span className="font-SofiaProRegular text-lg">{title}</span>
       </h2>
 
-      <div className="border-t pt-2 sm:pt-3 md:pt-5">
+      <div>
         {modules.map((module) => (
           <div key={module.key} className="sm:grid grid-cols-4 gap-3 my-4">
-            <h3 className="font-SofiaProRegular text-base lg:text-xl">
+            <h3 className="font-SofiaProRegular text-base lg:text-lg">
               {module.title}:
             </h3>
 

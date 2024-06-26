@@ -1,48 +1,98 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useParams, usePathname, useSearchParams } from "next/navigation";
 
 import { IoVideocam } from "react-icons/io5";
 import { FaCalendarCheck } from "react-icons/fa6";
 import { BsFillQuestionSquareFill } from "react-icons/bs";
+import clsx from "clsx";
 
-const ModuleListCard = ({ title, part }: { title: string; part: string }) => {
+const ModuleListCard = ({
+  title,
+  part,
+  inSidebar,
+  isFirst,
+  isLast,
+}: {
+  title: string;
+  part: string;
+  inSidebar?: boolean;
+  isFirst?: boolean;
+  isLast?: boolean;
+}) => {
   const pathName = usePathname();
+  const params = useParams();
+  const searchParams = useSearchParams();
+
+  const mode = searchParams.get("mode");
+  const path = `/courses/${params.courseId}/${params.contentId}`;
 
   return (
-    <div className="bg-Primary py-3 lg:px-16 md:px-10 px-5 my-3 rounded-lg">
-      <h4 className="text-Secondary font-SofiaProSemiBold text-lg lg:text-[22px] mb-[6px]">
+    <div
+      className={clsx("bg-Primary", {
+        "my-3 rounded-lg lg:px-16 md:px-10 px-5 py-3": !inSidebar,
+        "px-2 py-1": inSidebar,
+        "rounded-t-lg mt-3 pt-3": isFirst,
+        "rounded-b-lg": isLast,
+      })}
+    >
+      <h4
+        className={clsx("text-Secondary font-SofiaProSemiBold  mb-[6px]", {
+          "text-lg": !inSidebar,
+          "text-base": !inSidebar,
+        })}
+      >
         {title}
       </h4>
 
-      <ul className="px-3 sm:px-10 text-white text-sm sm:text-base">
-        <li className="my-2 hover:text-Secondary">
+      <ul
+        className={clsx("text-white", {
+          "px-3 sm:px-10 text-sm": !inSidebar,
+          "px-1 text-xs": inSidebar,
+        })}
+      >
+        <li
+          className={clsx("my-2 hover:text-Secondary", {
+            "text-Secondary":
+              pathName === `${path}/${part}` && (!mode || mode === "video"),
+          })}
+        >
           <Link
-            href={`${pathName}/${part}?mode=video`}
+            href={`${path}/${part}?mode=video`}
             className="flex items-center gap-4"
           >
-            <IoVideocam size={23} />
+            <IoVideocam size={inSidebar ? 18 : 23} />
             {`${title}: Explanation`}
           </Link>
         </li>
 
-        <li className="my-2 hover:text-Secondary">
+        <li
+          className={clsx("my-2 hover:text-Secondary", {
+            "text-Secondary":
+              pathName === `${path}/${part}` && (!mode || mode === "reading"),
+          })}
+        >
           <Link
-            href={`${pathName}/${part}?mode=reading`}
+            href={`${path}/${part}?mode=reading`}
             className="flex items-center gap-4"
           >
-            <FaCalendarCheck size={20} />
+            <FaCalendarCheck size={inSidebar ? 16 : 20} />
             {`${title}: Basic Concepts`}
           </Link>
         </li>
 
-        <li className="my-2 hover:text-Secondary">
+        <li
+          className={clsx("my-2 hover:text-Secondary", {
+            "text-Secondary":
+              pathName === `${path}/${part}` && (!mode || mode === "quiz"),
+          })}
+        >
           <Link
-            href={`${pathName}/${part}?mode=quiz`}
+            href={`${path}/${part}?mode=quiz`}
             className="flex items-center gap-4"
           >
-            <BsFillQuestionSquareFill size={20} />
+            <BsFillQuestionSquareFill size={inSidebar ? 16 : 20} />
             {`Challenge: ${title}`}
           </Link>
         </li>

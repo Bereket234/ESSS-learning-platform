@@ -2,6 +2,7 @@ export type cardData = {
   key: string;
   part: string;
   title: string;
+  modules?: moduleType[];
 };
 
 export type moduleCard = {
