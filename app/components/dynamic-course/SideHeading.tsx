@@ -16,13 +16,14 @@ const Heading = () => {
   return (
     <div
       className={clsx(
-        "md:px-10 px-5 bg-Tertiary pt-2 sm:pt-3 lg:px-5 flex gap-10 items-center",
+        "md:px-10 px-5 py-2 sm:py-3 lg:px-5 flex gap-10 items-center",
         {
-          "xl:sticky xl:top-0": isSidebar,
+          hidden: isSidebar,
+          block: !isSidebar,
         },
       )}
     >
-      <div className="w-full xl:max-w-md mx-auto flex gap-10 items-center border-b border-Quaternary xl:justify-center pb-2">
+      <div className="w-full mx-auto flex gap-10 items-center border-b border-Quaternary pb-2">
         <h2 className="font-SofiaProSemiBold text-xl sm:text-2xl">
           Sub-Courses
         </h2>

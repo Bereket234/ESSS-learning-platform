@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "@/app/globals.css";
 import Hero from "@/app/components/dynamic-course/Hero";
 import SideBar from "@/app/components/dynamic-course/SideBar";
-import Heading from "@/app/components/dynamic-course/Heading";
+import SideHeading from "@/app/components/dynamic-course/SideHeading";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +22,7 @@ export default function Layout({
       <Hero />
 
       {/* heading that controls sidebar toggle */}
-      <Heading />
+      <SideHeading />
 
       {/* section with course content */}
       <section className="xl:flex">
@@ -30,7 +30,7 @@ export default function Layout({
         <SideBar />
 
         {/* course content like video */}
-        <div className="w-full xl:border-l-2"> {children}</div>
+        <div className="xl:border-l-2 w-full">{children}</div>
       </section>
     </main>
   );

@@ -401,28 +401,28 @@ const SubCoursePage = ({
 
   return (
     <div className="mx-auto max-w-6xl xl:max-w-4xl 2xl:max-w-6xl px-4 py-3 w-full text-Primary">
-      <div className="flex sm:gap-3 items-center mb-8">
+      <div className="flex flex-wrap sm:gap-3 items-center mb-8">
         <TiHome size={40} className="sm:w-10 sm:h-10 w-8 h-8" />
 
         <BsDot size={40} className="pt-2 sm:w-10 sm:h-10 w-8 h-8" />
 
-        <p className="pt-3 font-SofiaProMedium text-base sm:text-2xl lg:text-[28px] text-Primary">
+        <p className="pt-3 font-SofiaProMedium text-base sm:text-xl text-Primary">
           {level}
         </p>
 
         <BsDot size={40} className="pt-2 sm:w-10 sm:h-10 w-8 h-8" />
 
-        <p className="pt-3 font-SofiaProMedium text-base sm:text-2xl lg:text-[28px] text-Primary">
+        <p className="pt-3 font-SofiaProMedium text-base sm:text-xl text-Primary">
           {subCourse.title}
         </p>
       </div>
 
-      <h2 className="font-SofiaProSemiBold text-2xl sm:text-3xl lg:text-[45px] my-6">
+      <h2 className="font-SofiaProSemiBold text-2xl sm:text-3xl my-6">
         {`Sub-Course ${subCourse.part}: ${subCourse.title}`}
       </h2>
 
       <div className="lg:px-16 md:px-10 px-5 py-3 bg-white border-l-8 rounded-lg border-Primary">
-        <h3 className="font-SofiaProSemiBold text-lg sm:text-xl lg:text-[22px] py-5 max-w-[80%] sm:max-w-[60%] border-b">
+        <h3 className="font-SofiaProSemiBold text-lg sm:text-xl py-5 max-w-[80%] sm:max-w-[60%] border-b">
           About the Sub-Course
         </h3>
 
@@ -432,7 +432,11 @@ const SubCoursePage = ({
       </div>
 
       {subCourse.modules.map((module) => (
-        <ModuleListCard title={module.title} part={module.part} />
+        <ModuleListCard
+          key={module.key}
+          title={module.title}
+          part={module.part}
+        />
       ))}
     </div>
   );
