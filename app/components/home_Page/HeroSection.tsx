@@ -54,7 +54,7 @@ const HeroSection = () => {
         </div>
       </div>
       <div className=" h-full flex items-end justify-center w-full flex-1 ">
-        <div className="max-h-full bg-slate-500 relative bottom-0 max-w-[600px] right-0 w-full aspect-[6/7]  ">
+        <div className="max-h-full relative bottom-0 max-w-[600px] right-0 w-full aspect-[6/7]  ">
           <Image
             className="absolute max-h-full bottom-0 "
             src="/assets/images/home_page/group_33@2x.png"
