@@ -3,12 +3,10 @@ import styles from "./home_page.module.css";
 import { cardItems } from "./dummyData";
 
 const ExploreSection = () => {
-  // get from backend
-  // carditem
   return (
     <section className=" flex flex-col lg:flex-row min-h-[400px] h-[80vh]">
       <div className="flex lg:w-1/3 items-center justify-center flex-1">
-        <div className="flex gap-3 w-full h-40 justify-center items-center lg:flex-none lg:flex-col lg:items-start tracking-wider font-AbolitionTestRegular leading-none [font-size:_clamp(35px,6vw,100px)] lg:w-2/3">
+        <div className="flex gap-3 h-40 justify-center items-center lg:flex-none lg:flex-col lg:items-start tracking-wider font-AbolitionTestRegular leading-none [font-size:_clamp(35px,6vw,100px)]  w-2/3">
           <h1 className="uppercase ">Find</h1>
           <h1 className="uppercase not-italic lg:italic lg:ml-[-12px]">
             What Interests

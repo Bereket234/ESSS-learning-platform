@@ -1,4 +1,5 @@
 export type cardData = {
+  key: string;
   src: string;
   vidLength: string;
   part: string;

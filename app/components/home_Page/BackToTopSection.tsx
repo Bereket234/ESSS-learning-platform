@@ -6,7 +6,7 @@ const BackToTopSection = () => {
   return (
     <div className="flex w-full mt-7 justify-end h-[5vh] ">
       <Link
-        href={"#heroSection"}
+        href="#"
         className={`flex items-center justify-center rounded-2xl p-3 mr-5 hover:translate-y-[-0.2rem] ${styles.back_to_top}`}
       >
         Back to Top
