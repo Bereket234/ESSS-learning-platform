@@ -38,7 +38,6 @@ const CoursePage = async ({
       {subCourses?.map((subCourse: subCoursesData) => (
         <Suspense key={subCourse._id} fallback={<p>Loading...</p>}>
           <SubCourseDescriptionCard
-            isSubcourseLoading={false}
             part={subCourse.part}
             title={subCourse.title}
             subCourseId={subCourse._id}
