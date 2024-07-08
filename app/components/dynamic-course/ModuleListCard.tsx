@@ -9,14 +9,16 @@ import { BsFillQuestionSquareFill } from "react-icons/bs";
 import clsx from "clsx";
 
 const ModuleListCard = ({
+  isLoading,
   title,
-  part,
+  id,
   inSidebar,
   isFirst,
   isLast,
 }: {
+  isLoading: boolean;
   title: string;
-  part: string;
+  id: string;
   inSidebar?: boolean;
   isFirst?: boolean;
   isLast?: boolean;
@@ -43,7 +45,7 @@ const ModuleListCard = ({
           "text-base": !inSidebar,
         })}
       >
-        {title}
+        {isLoading ? "Loading..." : title}
       </h4>
 
       <ul
@@ -55,45 +57,45 @@ const ModuleListCard = ({
         <li
           className={clsx("my-2 hover:text-Secondary", {
             "text-Secondary":
-              pathName === `${path}/${part}` && (!mode || mode === "video"),
+              pathName === `${path}/${id}` && (!mode || mode === "video"),
           })}
         >
           <Link
-            href={`${path}/${part}?mode=video`}
+            href={`${path}/${id}?mode=video`}
             className="flex items-center gap-4"
           >
             <IoVideocam size={inSidebar ? 18 : 23} />
-            {`${title}: Explanation`}
+            {isLoading ? "Loading" : `${title}: Explanation`}
           </Link>
         </li>
 
         <li
           className={clsx("my-2 hover:text-Secondary", {
             "text-Secondary":
-              pathName === `${path}/${part}` && (!mode || mode === "reading"),
+              pathName === `${path}/${id}` && (!mode || mode === "reading"),
           })}
         >
           <Link
-            href={`${path}/${part}?mode=reading`}
+            href={`${path}/${id}?mode=reading`}
             className="flex items-center gap-4"
           >
             <FaCalendarCheck size={inSidebar ? 16 : 20} />
-            {`${title}: Basic Concepts`}
+            {isLoading ? "Loading..." : `${title}: Basic Concepts`}
           </Link>
         </li>
 
         <li
           className={clsx("my-2 hover:text-Secondary", {
             "text-Secondary":
-              pathName === `${path}/${part}` && (!mode || mode === "quiz"),
+              pathName === `${path}/${id}` && (!mode || mode === "quiz"),
           })}
         >
           <Link
-            href={`${path}/${part}?mode=quiz`}
+            href={`${path}/${id}?mode=quiz`}
             className="flex items-center gap-4"
           >
             <BsFillQuestionSquareFill size={inSidebar ? 16 : 20} />
-            {`Challenge: ${title}`}
+            {isLoading ? "Loading..." : `Challenge: ${title}`}
           </Link>
         </li>
       </ul>

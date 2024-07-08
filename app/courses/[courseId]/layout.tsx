@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
+
 import "@/app/globals.css";
+
 import Hero from "@/app/components/dynamic-course/Hero";
 import SideBar from "@/app/components/dynamic-course/SideBar";
 import SideHeading from "@/app/components/dynamic-course/SideHeading";
@@ -19,7 +22,9 @@ export default function Layout({
   return (
     <main className="bg-Tertiary">
       {/* hero section that has details of the course */}
-      <Hero />
+      <Suspense fallback={<p>Loading...</p>}>
+        <Hero id={params.courseId} />
+      </Suspense>
 
       {/* heading that controls sidebar toggle */}
       <SideHeading />
