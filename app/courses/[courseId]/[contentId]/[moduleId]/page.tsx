@@ -7,7 +7,11 @@ import {
   questionsType,
   subCoursesData,
 } from "@/types/dynamic-courses/types";
-import { getItem } from "@/utils/fetchItem";
+import {
+  getCourseById,
+  getModuleById,
+  getSubCourseById,
+} from "@/utils/fetchItem";
 import { BsDot } from "react-icons/bs";
 import { TiHome } from "react-icons/ti";
 
@@ -19,15 +23,9 @@ const modulePage = async ({
   searchParams?: { mode?: string };
 }) => {
   const mode = searchParams?.mode;
-  const course: courseData = await getItem(
-    `http://localhost:8000/api/course/find/${params.courseId}`,
-  );
-  const subCourse: subCoursesData = await getItem(
-    `http://localhost:8000/api/subCourse/find/${params.contentId}`,
-  );
-  const module: moduleData = await getItem(
-    `http://localhost:8000/api/module/find/${params.moduleId}`,
-  );
+  const course: courseData = await getCourseById(params.courseId);
+  const subCourse: subCoursesData = await getSubCourseById(params.contentId);
+  const module: moduleData = await getModuleById(params.moduleId);
 
   const questions: questionsType[] = [
     {

@@ -1,5 +1,5 @@
 import { moduleData } from "@/types/dynamic-courses/types";
-import { getItem } from "@/utils/fetchItem";
+import { getModulesBySubCoureseId } from "@/utils/fetchItem";
 
 const SubCourseDescriptionCard = async ({
   part,
@@ -10,9 +10,7 @@ const SubCourseDescriptionCard = async ({
   title: string;
   subCourseId: string;
 }) => {
-  const modules = await getItem(
-    `http://localhost:8000/api/module/getModules/${subCourseId}`,
-  );
+  const modules: moduleData[] = await getModulesBySubCoureseId(subCourseId);
 
   return (
     <div className="border-l-8 rounded-lg text-Primary border-Primary bg-white px-5 py-4 my-4">

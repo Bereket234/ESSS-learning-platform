@@ -4,19 +4,17 @@ import { TiHome } from "react-icons/ti";
 import { BsDot } from "react-icons/bs";
 
 import SubCourseDescriptionCard from "@/app/components/dynamic-course/SubCourseDescriptionCard";
-import { subCoursesData } from "@/types/dynamic-courses/types";
-import { getItem } from "@/utils/fetchItem";
+import { courseData, subCoursesData } from "@/types/dynamic-courses/types";
+import { getCourseById, getSubCoursesByCourseId } from "@/utils/fetchItem";
 
 const CoursePage = async ({
   params,
 }: {
   params: { courseId: string; contentId: string; moduleId: string };
 }) => {
-  const course = await getItem(
-    `http://localhost:8000/api/course/find/${params.courseId}`,
-  );
-  const subCourses = await getItem(
-    `http://localhost:8000/api/subCourse/getSubCourses/${params.courseId}`,
+  const course: courseData = await getCourseById(params.courseId);
+  const subCourses: subCoursesData[] = await getSubCoursesByCourseId(
+    params.courseId,
   );
 
   return (

@@ -1,9 +1,10 @@
 import Image from "next/image";
 
-import { getItem } from "@/utils/fetchItem";
+import { getCourseById } from "@/utils/fetchItem";
+import { courseData } from "@/types/dynamic-courses/types";
 
 const Hero = async ({ id }: { id: string }) => {
-  const course = await getItem(`http://localhost:8000/api/course/find/${id}`);
+  const course: courseData = await getCourseById(id);
 
   return (
     <section className="bg-[url('/assets/images/dynamic-courses/hero-bg.png')] relative rounded-l-md">
