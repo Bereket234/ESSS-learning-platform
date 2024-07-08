@@ -19,14 +19,14 @@ const Footer = () => {
             <Image
               src={"/assets/images/footer/esss-learning.png"}
               alt="Logo"
-              width={280}
-              height={180}
+              width={285}
+              height={185}
               className="flex items-center md:items-start xl:justify-between p-2 xl:mr-48 2xl:mr-80"
             />
 
             <div className="hidden text-sm items-left font-SofiaProExtraLight p-2 sm:flex md:text-sm lg:text-base lg:mx-4 xl:text-lg xl:p-4 2xl:text-xl 3xl:text-2xl max-w-[800px] 2xl:ml-40 3xl:ml-90">
               <p>
-                Learning is a new initiative by the Ethiopian Space Science
+                Learning a new initiative by the Ethiopian Space Science
                 Society (ESSS), dedicated to making space science and technology
                 education accessible to everyone. At ESSS, we're passionate
                 about exploring the mysteries of the cosmos and sharing that
