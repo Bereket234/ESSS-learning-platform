@@ -19,8 +19,8 @@ const Footer = () => {
             <Image
               src={"/assets/images/footer/esss-learning.png"}
               alt="Logo"
-              width={285}
-              height={185}
+              width={290}
+              height={190}
               className="flex items-center md:items-start xl:justify-between p-2 xl:mr-48 2xl:mr-80"
             />
 
