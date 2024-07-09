@@ -11,7 +11,7 @@ const GetStarted = () => {
           <div className=" w-1/3 md:w-1/2 rotate-90">
             <LottiePlayer />
           </div>
-          <button className=" text-Secondary mt-4 px-4 py-2 lg:px-5 lg:py-3 lg:text-2xl text-xl bg-Primary rounded-full hover:border-2 hover:border-Primary hover:bg-Secondary hover:text-Primary  ">
+          <button className="z-[100] text-Secondary mt-4 px-4 py-2 lg:px-5 lg:py-3 lg:text-2xl text-xl bg-Primary rounded-full hover:border-2 hover:border-Primary hover:bg-Secondary hover:text-Primary  ">
             <Link href="/register">Register Now</Link>
           </button>
         </div>
