@@ -13,6 +13,7 @@ import {
   useGetModulesBySubcourseIdQuery,
   useGetSubcoursesByCourseIdQuery,
 } from "@/store/api";
+import { ModuleListSkeleton, SideBarSubCourseSkeleton } from "../Skeletons";
 
 const SideBar = () => {
   const pathName = usePathname();
@@ -31,7 +32,7 @@ const SideBar = () => {
     isFetching: moduleIsFetching,
     isLoading: moduleIsLoading,
     isError: moduleIsError,
-  } = useGetModulesBySubcourseIdQuery(params.moduleId);
+  } = useGetModulesBySubcourseIdQuery(params.contentId);
 
   return (
     <div
@@ -45,6 +46,16 @@ const SideBar = () => {
       <div className="xl:max-w-md items-stretch grid grid-cols-2 lg:grid-cols-3 min-[1160px]:grid-cols-4 xl:flex xl:flex-col gap-3 mx-6 pt-5">
         {isError ? (
           <div>Error</div>
+        ) : isLoading || isFetching ? (
+          <>
+            <SideBarSubCourseSkeleton />
+            <SideBarSubCourseSkeleton />
+            <SideBarSubCourseSkeleton />
+            <SideBarSubCourseSkeleton />
+            <SideBarSubCourseSkeleton />
+            <SideBarSubCourseSkeleton />
+            <SideBarSubCourseSkeleton />
+          </>
         ) : (
           subCourses?.map((subCourse: subCoursesData) => (
             <div
@@ -65,8 +76,8 @@ const SideBar = () => {
                     pathName.includes(
                       `/courses/${params.courseId}/${subCourse._id}/${params.moduleId}`,
                     ))
-                    ? "first:bg-Secondary"
-                    : "group-hover:bg-Secondary bg-white"
+                    ? "bg-Secondary"
+                    : "hover:bg-Secondary bg-white"
                 }
               `}
               >
@@ -84,12 +95,17 @@ const SideBar = () => {
                 pathName.includes(
                   `/courses/${params.courseId}/${subCourse._id}/${params.moduleId}`,
                 ) &&
-                modules?.map((module: moduleData, index: number) =>
-                  moduleIsError ? (
-                    <div>Error</div>
-                  ) : (
+                (moduleIsError ? (
+                  <div>Error</div>
+                ) : moduleIsLoading || moduleIsFetching ? (
+                  <>
+                    <ModuleListSkeleton />
+                    <ModuleListSkeleton />
+                    <ModuleListSkeleton />
+                  </>
+                ) : (
+                  modules.map((module: moduleData, index: number) => (
                     <ModuleListCard
-                      isLoading={moduleIsLoading || moduleIsFetching}
                       key={module._id}
                       id={module._id}
                       title={module.title}
@@ -97,8 +113,8 @@ const SideBar = () => {
                       isFirst={index === 0}
                       isLast={modules && index === modules.length - 1}
                     />
-                  ),
-                )}
+                  ))
+                ))}
             </div>
           ))
         )}

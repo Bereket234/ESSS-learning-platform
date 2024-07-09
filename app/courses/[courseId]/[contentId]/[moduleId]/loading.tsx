@@ -1,5 +1,7 @@
-const loading = () => {
-  return <div>Loading...</div>;
+import { ModulePageSkeleton } from "@/app/components/Skeletons";
+
+const Loading = () => {
+  return <ModulePageSkeleton />;
 };
 
-export default loading;
+export default Loading;

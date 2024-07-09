@@ -6,6 +6,7 @@ import "@/app/globals.css";
 import Hero from "@/app/components/dynamic-course/Hero";
 import SideBar from "@/app/components/dynamic-course/SideBar";
 import SideHeading from "@/app/components/dynamic-course/SideHeading";
+import { CourseHeroSkeleton } from "@/app/components/Skeletons";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +23,7 @@ export default function Layout({
   return (
     <main className="bg-Tertiary">
       {/* hero section that has details of the course */}
-      <Suspense fallback={<p>Loading...</p>}>
+      <Suspense fallback={<CourseHeroSkeleton />}>
         <Hero id={params.courseId} />
       </Suspense>
 

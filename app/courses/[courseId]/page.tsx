@@ -6,6 +6,7 @@ import { BsDot } from "react-icons/bs";
 import SubCourseDescriptionCard from "@/app/components/dynamic-course/SubCourseDescriptionCard";
 import { courseData, subCoursesData } from "@/types/dynamic-courses/types";
 import { getCourseById, getSubCoursesByCourseId } from "@/utils/fetchItem";
+import { SubCourseDescriptionSkeleton } from "@/app/components/Skeletons";
 
 const CoursePage = async ({
   params,
@@ -34,7 +35,10 @@ const CoursePage = async ({
       </h2>
 
       {subCourses?.map((subCourse: subCoursesData) => (
-        <Suspense key={subCourse._id} fallback={<p>Loading...</p>}>
+        <Suspense
+          key={subCourse._id}
+          fallback={<SubCourseDescriptionSkeleton />}
+        >
           <SubCourseDescriptionCard
             part={subCourse.part}
             title={subCourse.title}

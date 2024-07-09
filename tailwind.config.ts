@@ -25,7 +25,7 @@ const config: Config = {
         SofiaProExtraLight: ["SofiaProExtraLight", "sans-serif"],
         SofiaProLightItalic: ["SofiaProLightItalic", "sans-serif"],
         SofiaProLight: ["SofiaProLight", "sans-serif"],
-        AbolitionTestRegular:["AbolitionTestRegular"],
+        AbolitionTestRegular: ["AbolitionTestRegular"],
       },
       colors: {
         Quinary: "#707070",
@@ -34,6 +34,13 @@ const config: Config = {
         Secondary: "#E0F869",
         Primary: "#072434",
         Senary:"#03800C"
+      },
+    },
+    keyframes: {
+      shimmer: {
+        "100%": {
+          transform: "translateX(100%)",
+        },
       },
     },
     plugins: [],

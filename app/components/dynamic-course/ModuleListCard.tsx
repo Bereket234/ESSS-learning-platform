@@ -9,14 +9,12 @@ import { BsFillQuestionSquareFill } from "react-icons/bs";
 import clsx from "clsx";
 
 const ModuleListCard = ({
-  isLoading,
   title,
   id,
   inSidebar,
   isFirst,
   isLast,
 }: {
-  isLoading: boolean;
   title: string;
   id: string;
   inSidebar?: boolean;
@@ -41,11 +39,11 @@ const ModuleListCard = ({
     >
       <h4
         className={clsx("text-Secondary font-SofiaProSemiBold  mb-[6px]", {
-          "text-lg": !inSidebar,
+          "text-lg": inSidebar,
           "text-base": !inSidebar,
         })}
       >
-        {isLoading ? "Loading..." : title}
+        {title}
       </h4>
 
       <ul
@@ -65,7 +63,7 @@ const ModuleListCard = ({
             className="flex items-center gap-4"
           >
             <IoVideocam size={inSidebar ? 18 : 23} />
-            {isLoading ? "Loading" : `${title}: Explanation`}
+            {`${title}: Explanation`}
           </Link>
         </li>
 
@@ -80,7 +78,7 @@ const ModuleListCard = ({
             className="flex items-center gap-4"
           >
             <FaCalendarCheck size={inSidebar ? 16 : 20} />
-            {isLoading ? "Loading..." : `${title}: Basic Concepts`}
+            {`${title}: Basic Concepts`}
           </Link>
         </li>
 
@@ -95,7 +93,7 @@ const ModuleListCard = ({
             className="flex items-center gap-4"
           >
             <BsFillQuestionSquareFill size={inSidebar ? 16 : 20} />
-            {isLoading ? "Loading..." : `Challenge: ${title}`}
+            {`Challenge: ${title}`}
           </Link>
         </li>
       </ul>

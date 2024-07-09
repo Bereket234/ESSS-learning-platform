@@ -57,12 +57,7 @@ const SubCoursePage = async ({
       </div>
 
       {modules?.map((module: moduleData) => (
-        <ModuleListCard
-          key={module._id}
-          id={module._id}
-          isLoading={false}
-          title={module.title}
-        />
+        <ModuleListCard key={module._id} id={module._id} title={module.title} />
       ))}
     </div>
   );
