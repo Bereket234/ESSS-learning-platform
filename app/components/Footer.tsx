@@ -17,7 +17,7 @@ const Footer = () => {
           {/* About ESSS */}
           <div className="w-full md:mb-0">
             <Image
-              src={"/assets/images/footer/esss-learning.png"}
+              src="/assets/images/ESSS-LOGO.png"
               alt="Logo"
               width={290}
               height={190}

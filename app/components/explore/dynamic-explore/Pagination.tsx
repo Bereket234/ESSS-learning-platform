@@ -27,7 +27,7 @@ const Pagination: React.FC<PaginationProps> = ({ totalPages }) => {
         key={i}
         onClick={() => handlePageChange(i)}
         className={`h-[37px] w-[37px] flex items-center justify-center font-SofiaProSemiBold text-3xl rounded-full shadow-xl mx-1 cursor-pointer ${
-          currentPage === i ? "bg-Primary text-Secondary" : "bg-[#F8F7F4] text-Primary" 
+          currentPage === i ? "bg-Primary text-Secondary" : "bg-[#F8F7F4] text-Primary"
         }`}
       >
         {i}
@@ -36,29 +36,26 @@ const Pagination: React.FC<PaginationProps> = ({ totalPages }) => {
   }
 
   return (
-    <div className="flex">
-      <div className="mr-5">
+    <div className="flex flex-col sm:flex-row items-center justify-center">
+      <div className="flex items-center justify-center mt-5 sm:mt-0">
         <button onClick={handleFirstPage} disabled={currentPage === 1}>
-          <MdFirstPage size={48} />
+          <MdFirstPage size={24} />
         </button>
-      </div>
-      <div className="mr-20">
-        <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
-          <MdNavigateBefore size={48} />
-        </button>
-      </div>
-
-      <div className="flex items-center gap-4">{circles}</div>
-
-      <div className="ml-20">
-        <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
-          <MdNavigateNext size={48} />
+        <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1} className="ml-2">
+          <MdNavigateBefore size={24} />
         </button>
       </div>
 
-      <div className="ml-5">
+      <div className="flex items-center gap-4 mt-4 sm:mt-0">
+        {circles}
+      </div>
+
+      <div className="flex items-center justify-center mt-5 sm:mt-0">
+        <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages} className="mr-2">
+          <MdNavigateNext size={24} />
+        </button>
         <button onClick={handleLastPage} disabled={currentPage === totalPages}>
-          <MdLastPage size={48} />
+          <MdLastPage size={24} />
         </button>
       </div>
     </div>
