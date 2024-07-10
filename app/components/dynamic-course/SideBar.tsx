@@ -14,6 +14,7 @@ import {
   useGetSubcoursesByCourseIdQuery,
 } from "@/store/api";
 import { ModuleListSkeleton, SideBarSubCourseSkeleton } from "../Skeletons";
+import { ModuleError, SubCourseError } from "./SideBarErrors";
 
 const SideBar = () => {
   const pathName = usePathname();
@@ -25,14 +26,20 @@ const SideBar = () => {
     isFetching,
     isLoading,
     isError,
-  } = useGetSubcoursesByCourseIdQuery(params.courseId);
+    refetch,
+  } = useGetSubcoursesByCourseIdQuery(params.courseId, {
+    refetchOnMountOrArgChange: true,
+  });
 
   const {
     data: modules,
     isFetching: moduleIsFetching,
     isLoading: moduleIsLoading,
     isError: moduleIsError,
-  } = useGetModulesBySubcourseIdQuery(params.contentId);
+    refetch: moduleRefetch,
+  } = useGetModulesBySubcourseIdQuery(params.contentId, {
+    refetchOnMountOrArgChange: true,
+  });
 
   return (
     <div
@@ -45,7 +52,7 @@ const SideBar = () => {
 
       <div className="xl:max-w-md items-stretch grid grid-cols-2 lg:grid-cols-3 min-[1160px]:grid-cols-4 xl:flex xl:flex-col gap-3 mx-6 pt-5">
         {isError ? (
-          <div>Error</div>
+          <SubCourseError refetch={refetch} />
         ) : isLoading || isFetching ? (
           <>
             <SideBarSubCourseSkeleton />
@@ -96,7 +103,7 @@ const SideBar = () => {
                   `/courses/${params.courseId}/${subCourse._id}/${params.moduleId}`,
                 ) &&
                 (moduleIsError ? (
-                  <div>Error</div>
+                  <ModuleError refetch={moduleRefetch} />
                 ) : moduleIsLoading || moduleIsFetching ? (
                   <>
                     <ModuleListSkeleton />

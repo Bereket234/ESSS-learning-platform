@@ -70,7 +70,7 @@ const ModuleListCard = ({
         <li
           className={clsx("my-2 hover:text-Secondary", {
             "text-Secondary":
-              pathName === `${path}/${id}` && (!mode || mode === "reading"),
+              pathName === `${path}/${id}` && mode === "reading",
           })}
         >
           <Link
@@ -84,8 +84,7 @@ const ModuleListCard = ({
 
         <li
           className={clsx("my-2 hover:text-Secondary", {
-            "text-Secondary":
-              pathName === `${path}/${id}` && (!mode || mode === "quiz"),
+            "text-Secondary": pathName === `${path}/${id}` && mode === "quiz",
           })}
         >
           <Link
