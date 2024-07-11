@@ -8,7 +8,9 @@ import {
 
 export const getCourseById = async (id: string): Promise<courseData> => {
   try {
-    const res = await fetch(`http://localhost:8000/api/course/find/${id}`);
+    const res = await fetch(`http://localhost:8000/api/course/find/${id}`, {
+      next: { revalidate: 3600, tags: ["course"] },
+    });
     const course = await res.json();
 
     return course;
@@ -24,6 +26,7 @@ export const getSubCoursesByCourseId = async (
   try {
     const res = await fetch(
       `http://localhost:8000/api/subCourse/getSubCourses/${id}`,
+      { next: { revalidate: 3600, tags: ["subCourses"] } },
     );
     const subCourses = await res.json();
 
@@ -36,7 +39,9 @@ export const getSubCoursesByCourseId = async (
 
 export const getSubCourseById = async (id: string): Promise<subCoursesData> => {
   try {
-    const res = await fetch(`http://localhost:8000/api/subCourse/find/${id}`);
+    const res = await fetch(`http://localhost:8000/api/subCourse/find/${id}`, {
+      next: { revalidate: 3600, tags: ["subCourse"] },
+    });
     const subCourse = await res.json();
 
     return subCourse;
@@ -52,6 +57,7 @@ export const getModulesBySubCoureseId = async (
   try {
     const res = await fetch(
       `http://localhost:8000/api/module/getModules/${id}`,
+      { next: { revalidate: 3600, tags: ["modules"] } },
     );
     const modules = await res.json();
 
@@ -64,7 +70,9 @@ export const getModulesBySubCoureseId = async (
 
 export const getModuleById = async (id: string): Promise<moduleData> => {
   try {
-    const res = await fetch(`http://localhost:8000/api/module/find/${id}`);
+    const res = await fetch(`http://localhost:8000/api/module/find/${id}`, {
+      next: { revalidate: 3600, tags: ["module"] },
+    });
     const module = await res.json();
 
     return module;
