@@ -9,6 +9,7 @@ import {
 } from "next/navigation";
 
 import { FaRegCircleCheck } from "react-icons/fa6";
+import clsx from "clsx";
 
 import {
   actionButtonsData,
@@ -104,11 +105,11 @@ const ActionButtons = ({
 
   return (
     <>
-      <div className="flex items-center gap-3 sm:gap-9 justify-end mt-8 text-xs md:text-sm lg:text-lg">
+      <div className="flex flex-wrap items-center gap-3 sm:gap-9 justify-end mt-8 text-xs md:text-sm lg:text-lg">
         <button
           disabled={module.part === 1 && subCourse.part === 1}
           onClick={handlePrev}
-          className="bg-white disabled:bg-white/10 disabled:text-Primary/20 disabled:border-Primary/20 text-Primary rounded-[7px] border border-Primary px-2 py-1 sm:py-2 sm:px-4 font-SofiaProRegular"
+          className="bg-white min-w-fit disabled:bg-white/10 disabled:text-Primary/20 disabled:border-Primary/20 text-Primary rounded-[7px] border border-Primary px-2 py-1 sm:py-2 sm:px-4 font-SofiaProRegular"
         >
           Prev. Section
         </button>
@@ -116,11 +117,21 @@ const ActionButtons = ({
         <button
           disabled={module.status === "COMPLETED"}
           onClick={handleComplete}
-          className="bg-Primary disabled:text-Secondary/70 disabled:bg-Primary/80 rounded-[7px] text-white px-2 py-1 sm:py-2 border border-Primary sm:px-4 font-SofiaProRegular"
+          className={clsx(
+            "bg-Primary min-w-fit disabled:text-Secondary/70 disabled:bg-Primary/80 rounded-[7px] text-white px-2 border border-Primary sm:px-4 font-SofiaProRegular",
+            {
+              "py-0.5 sm:py-1.5": module.status === "COMPLETED",
+              "py-1 sm:py-2": module.status !== "COMPLETED",
+            },
+          )}
         >
           {module.status === "COMPLETED" ? (
             <span className="flex items-center justify-center gap-3">
-              <p className="mt-1">Completed</p> <FaRegCircleCheck size={25} />
+              <p className="mt-1">Completed</p>
+              <FaRegCircleCheck
+                size={25}
+                className="lg:w-[25px] lg:h-[25px] w-3.5 h-3.5 sm:w-5 sm:h-5"
+              />
             </span>
           ) : (
             "Mark as Complete"
@@ -133,7 +144,7 @@ const ActionButtons = ({
             subCourse.part === subCourses.length
           }
           onClick={handleNext}
-          className="bg-white disabled:bg-white/10 disabled:text-Primary/20 disabled:border-Primary/20 rounded-[7px] text-Primary px-2 py-1 sm:py-2 border border-Primary sm:px-4 font-SofiaProRegular"
+          className="bg-white min-w-fit disabled:bg-white/10 disabled:text-Primary/20 disabled:border-Primary/20 rounded-[7px] text-Primary px-2 py-1 sm:py-2 border border-Primary sm:px-4 font-SofiaProRegular"
         >
           Next Section
         </button>
