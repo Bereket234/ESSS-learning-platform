@@ -8,7 +8,7 @@ const Quiz = ({
   questions: questionsType[];
 }) => {
   return (
-    <div className="text-Primary rounded-[10px] border-2 bg-white px-12 py-7">
+    <div className="text-Primary rounded-[10px] border-2 bg-white px-2 sm:px-12 py-7">
       <h3 className="text-xl font-SofiaProRegular mb-10">Challenge: {title}</h3>
 
       <ul>
