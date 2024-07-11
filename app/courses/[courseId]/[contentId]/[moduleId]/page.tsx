@@ -1,3 +1,4 @@
+import ActionButtons from "@/app/components/dynamic-course/ActionButtons";
 import Quiz from "@/app/components/dynamic-course/Quiz";
 import Reader from "@/app/components/dynamic-course/Reader";
 import VideoPlayer from "@/app/components/dynamic-course/VideoPlayer";
@@ -10,7 +11,9 @@ import {
 import {
   getCourseById,
   getModuleById,
+  getModulesBySubCoureseId,
   getSubCourseById,
+  getSubCoursesByCourseId,
 } from "@/utils/fetchItem";
 import { BsDot } from "react-icons/bs";
 import { TiHome } from "react-icons/ti";
@@ -25,7 +28,13 @@ const modulePage = async ({
   const mode = searchParams?.mode;
   const course: courseData = await getCourseById(params.courseId);
   const subCourse: subCoursesData = await getSubCourseById(params.contentId);
+  const subCourses: subCoursesData[] = await getSubCoursesByCourseId(
+    params.courseId,
+  );
   const module: moduleData = await getModuleById(params.moduleId);
+  const modules: moduleData[] = await getModulesBySubCoureseId(
+    params.contentId,
+  );
 
   const questions: questionsType[] = [
     {
@@ -138,19 +147,12 @@ const modulePage = async ({
         )}
       </div>
 
-      <div className="flex items-center gap-3 sm:gap-9 justify-end mt-8 text-xs md:text-sm lg:text-lg">
-        <button className="bg-white text-Primary rounded-[7px] border border-Primary px-2 py-1 sm:py-2 sm:px-4 font-SofiaProRegular">
-          Prev. Section
-        </button>
-
-        <button className="bg-Primary rounded-[7px] text-white px-2 py-1 sm:py-2 border border-Primary sm:px-4 font-SofiaProRegular">
-          Mark as Complete
-        </button>
-
-        <button className="bg-white rounded-[7px] text-Primary px-2 py-1 sm:py-2 border border-Primary sm:px-4 font-SofiaProRegular">
-          Next Section
-        </button>
-      </div>
+      <ActionButtons
+        subCourse={subCourse}
+        subCourses={subCourses}
+        module={module}
+        modules={modules}
+      />
     </div>
   );
 };

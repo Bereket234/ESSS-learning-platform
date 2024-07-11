@@ -44,6 +44,13 @@ export type questionsType = {
   choices: choisesType[];
 };
 
+export type actionButtonsData = {
+  subCourse: subCoursesData;
+  subCourses: subCoursesData[];
+  module: moduleData;
+  modules: moduleData[];
+};
+
 export type courseData = {
   _id: string;
   title: string;
