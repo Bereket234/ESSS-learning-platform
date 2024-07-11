@@ -4,14 +4,16 @@ import Link from "next/link";
 
 const BackToTopSection = () => {
   return (
-    <div className="flex w-full mt-7 justify-end h-[5vh] ">
+    <div
+      className={`max-w-fit sticky bottom-4 right-8 ml-auto hover:translate-y-[-0.2rem] ${styles.back_to_top}`}
+    >
       <Link
         href="#"
-        className={`flex items-center justify-center rounded-2xl p-3 mr-5 hover:translate-y-[-0.2rem] ${styles.back_to_top}`}
+        className={`flex items-center justify-center rounded-2xl px-3 py-2`}
       >
         Back to Top
         <Image
-          className=" ml-4 w-7 bottom-5  right-5 "
+          className=" ml-4 w-7"
           src="/assets/images/home_page/union.svg"
           width={100}
           height={100}

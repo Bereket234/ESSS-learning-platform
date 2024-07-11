@@ -10,7 +10,7 @@ import RegisterSection from "./components/home_Page/RegisterSection";
 
 export default function Home() {
   return (
-    <main>
+    <main className="relative pb-3">
       <HeroSection />
       <GetStarted />
       <ExploreSection />
