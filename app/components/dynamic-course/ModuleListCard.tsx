@@ -26,7 +26,7 @@ const ModuleListCard = ({
   const searchParams = useSearchParams();
 
   const mode = searchParams.get("mode");
-  const path = `/courses/${params.courseId}/${params.contentId}`;
+  const path = `/courses/${params.courseId}/${params.contentId}/${id}`;
 
   return (
     <div
@@ -55,11 +55,11 @@ const ModuleListCard = ({
         <li
           className={clsx("my-2 hover:text-Secondary", {
             "text-Secondary":
-              pathName === `${path}/${id}` && (!mode || mode === "video"),
+              pathName === `${path}` && (!mode || mode === "video"),
           })}
         >
           <Link
-            href={`${path}/${id}?mode=video`}
+            href={`${path}?${new URLSearchParams({ mode: "video" })}`}
             className="flex items-center gap-4"
           >
             <IoVideocam size={inSidebar ? 18 : 23} />
@@ -69,12 +69,11 @@ const ModuleListCard = ({
 
         <li
           className={clsx("my-2 hover:text-Secondary", {
-            "text-Secondary":
-              pathName === `${path}/${id}` && mode === "reading",
+            "text-Secondary": pathName === `${path}` && mode === "reading",
           })}
         >
           <Link
-            href={`${path}/${id}?mode=reading`}
+            href={`${path}?${new URLSearchParams({ mode: "reading" })}`}
             className="flex items-center gap-4"
           >
             <FaCalendarCheck size={inSidebar ? 16 : 20} />
@@ -84,11 +83,11 @@ const ModuleListCard = ({
 
         <li
           className={clsx("my-2 hover:text-Secondary", {
-            "text-Secondary": pathName === `${path}/${id}` && mode === "quiz",
+            "text-Secondary": pathName === `${path}` && mode === "quiz",
           })}
         >
           <Link
-            href={`${path}/${id}?mode=quiz`}
+            href={`${path}?${new URLSearchParams({ mode: "quiz" })}`}
             className="flex items-center gap-4"
           >
             <BsFillQuestionSquareFill size={inSidebar ? 16 : 20} />
