@@ -42,6 +42,11 @@ const config: Config = {
           transform: "translateX(100%)",
         },
       },
+      popupin: {
+        to: {
+          right: "4px",
+        },
+      },
     },
     plugins: [],
   },
