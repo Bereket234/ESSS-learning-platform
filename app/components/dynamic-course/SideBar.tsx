@@ -41,6 +41,10 @@ const SideBar = () => {
     refetchOnMountOrArgChange: true,
   });
 
+  const curSubCourse: subCoursesData[] = subCourses?.filter(
+    (s: subCoursesData) => s._id === params.contentId,
+  );
+
   return (
     <div
       className={clsx("xl:self-start h-auto overflow-y-auto", {
@@ -50,7 +54,7 @@ const SideBar = () => {
     >
       <Heading />
 
-      <div className="xl:max-w-md items-stretch grid grid-cols-2 lg:grid-cols-3 min-[1160px]:grid-cols-4 xl:flex xl:flex-col gap-3 mx-6 pt-5">
+      <div className="xl:max-w-md items-stretch grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 min-[1160px]:grid-cols-4 xl:flex xl:flex-col gap-3 mx-6 pt-5">
         {isError ? (
           <SubCourseError refetch={refetch} />
         ) : isLoading || isFetching ? (
@@ -68,11 +72,12 @@ const SideBar = () => {
             <div
               key={subCourse._id}
               className={clsx("group", {
-                "col-span-2 lg:col-span-3 min-[1160px]:col-span-4":
+                "col-span-1 sm:col-span-2 lg:col-span-3 min-[1160px]:col-span-4":
                   !!params.moduleId &&
-                  pathName.includes(
+                  (pathName.includes(
                     `/courses/${params.courseId}/${subCourse._id}/${params.moduleId}`,
-                  ),
+                  ) ||
+                    subCourse.part < curSubCourse[0].part),
               })}
             >
               <div
