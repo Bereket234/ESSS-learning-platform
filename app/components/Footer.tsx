@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+
 import {
   FaFacebook,
   FaInstagram,
@@ -8,16 +9,15 @@ import {
   FaTelegram,
 } from "react-icons/fa6";
 
-
 const Footer = () => {
   return (
-      <footer className="text-Secondary bg-Primary py-4 mt-2">
-        <div className=" mx-auto px-4 lg:px-0"> 
+    <footer className="text-Secondary bg-Primary py-4 mt-2">
+      <div className=" mx-auto px-4 lg:px-0">
         <div className="flex flex-col md:flex-row justify-between">
           {/* About ESSS */}
           <div className="w-full md:mb-0">
             <Image
-              src="/assets/images/ESSS-LOGO.png"
+              src="/assets/images/footer/esss-learning.png"
               alt="Logo"
               width={290}
               height={190}
@@ -26,8 +26,8 @@ const Footer = () => {
 
             <div className="hidden text-sm items-left font-SofiaProExtraLight p-2 sm:flex md:text-sm lg:text-base lg:mx-4 xl:text-lg xl:p-4 2xl:text-xl 3xl:text-2xl max-w-[800px] 2xl:ml-40 3xl:ml-90">
               <p>
-                Learning a new initiative by the Ethiopian Space Science
-                Society (ESSS), dedicated to making space science and technology
+                Learning a new initiative by the Ethiopian Space Science Society
+                (ESSS), dedicated to making space science and technology
                 education accessible to everyone. At ESSS, we're passionate
                 about exploring the mysteries of the cosmos and sharing that
                 knowledge with the world.
@@ -99,10 +99,9 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          </div>
         </div>
-      </footer>
-   
+      </div>
+    </footer>
   );
 };
 
