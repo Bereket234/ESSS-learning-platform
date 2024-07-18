@@ -8,9 +8,36 @@ export const esssApi = createApi({
     getModuleById: builder.query({
       query: (id) => `course/find//${id}`,
     }),
+
+    getModulesBySubcourseId: builder.query({
+      query: (subcourseId) => `module/getModules/${subcourseId}`,
+    }),
+
+    getSubcourseById: builder.query({
+      query: (id) => `subCourse/find/${id}`,
+    }),
+
+    getSubcoursesByCourseId: builder.query({
+      query: (courseId) => `subCourse/getSubCourses/${courseId}`,
+    }),
+
+    getAllCourse: builder.query({
+      query: () => "course/getAllCourses",
+    }),
+
+    getCourseById: builder.query({
+      query: (id) => `course/find/${id}`,
+    }),
   }),
 });
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetModuleByIdQuery } = esssApi;
+export const {
+  useGetModuleByIdQuery,
+  useGetAllCourseQuery,
+  useGetCourseByIdQuery,
+  useGetModulesBySubcourseIdQuery,
+  useGetSubcoursesByCourseIdQuery,
+  useGetSubcourseByIdQuery,
+} = esssApi;

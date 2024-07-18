@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
+
 import "@/app/globals.css";
+
 import Hero from "@/app/components/dynamic-course/Hero";
 import SideBar from "@/app/components/dynamic-course/SideBar";
-import Heading from "@/app/components/dynamic-course/Heading";
+import SideHeading from "@/app/components/dynamic-course/SideHeading";
+import { CourseHeroSkeleton } from "@/app/components/Skeletons";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,25 +18,25 @@ export default function Layout({
   params,
 }: {
   children: React.ReactNode;
-  params: { courseId: string; contentId: string };
+  params: { courseId: string; contentId: string; moduleId: string };
 }) {
   return (
-    <main>
+    <main className="bg-Tertiary">
       {/* hero section that has details of the course */}
-      <Hero />
+      <Suspense fallback={<CourseHeroSkeleton />}>
+        <Hero id={params.courseId} />
+      </Suspense>
 
       {/* heading that controls sidebar toggle */}
-      <section className="md:px-10 px-5">
-        <Heading />
-      </section>
+      <SideHeading />
 
       {/* section with course content */}
       <section className="xl:flex">
         {/* sidebar to navigate between sub-courses */}
-        <SideBar id={params.courseId} />
+        <SideBar />
 
         {/* course content like video */}
-        {children}
+        <div className="xl:border-l-2 w-full">{children}</div>
       </section>
     </main>
   );
