@@ -3,12 +3,11 @@ import InputForm from "./InputForm"
 
 const SingIn = () => {
     return (
-        <div className="flex flex-col relative">
+        <div className="grid grid-cols-2">
             {/* ESSS logo */}
-            <div className="flex flex-col h-full bg-Primary w-1/4">
-                {/* <Image className="mt-12 absolute" src= "/assets/images/signin.png" alt = "signIn" width={864} height={797}/> */}
-
-                <Image src = "/assets/images/learning-yello.png" alt="logo" width={344} height={83}/>
+            <div className="h-full bg-Primary w-1/4 relative">
+                <Image className="mt-12 absolute" src= "/assets/images/signin.png" alt = "signIn" width={864} height={797}/>
+                <Image src = "/assets/images/learning-yello.png" alt="logo" width={244} height={53}/>
             </div>
 
             {/* SignIn Form */}
