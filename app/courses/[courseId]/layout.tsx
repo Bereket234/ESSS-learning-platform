@@ -31,7 +31,7 @@ export default function Layout({
       <SideHeading />
 
       {/* section with course content */}
-      <section className="xl:flex">
+      <section className="xl:flex xl:min-h-[80vh] pb-5">
         {/* sidebar to navigate between sub-courses */}
         <SideBar />
 
